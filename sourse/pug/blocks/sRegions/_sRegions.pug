@@ -1,0 +1,28 @@
+mixin sRegions(data)
+	// start sRegions
+	+b.SECTION.sRegions.section#sRegions&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Регионы
+				
+			+e.row.row
+				mixin item(i, t)
+					+e.col.col-12
+						+b.region-item(href="#").bg-wrap
+							+img(`img/region-${i}.jpg`,bg).picture-bg
+							+e.title= t
+				- for (var x = 0; x < 3; x++)
+					+item(`1`,`Европейский север`)
+					+item(`2`,`Запад`)
+					+item(`3`,`Центр`)
+					+item(`4`,`Северо-Запад`)
+					+item(`5`,`Поволжье`)
+					+item(`6`,`Юг`)
+					+item(`7`,`Кавказ`)
+					+item(`8`,`Урал`)
+					+item(`9`,`Азиатский север`)
+					+item(`10`,`Западная Сибирь`)
+					+item(`11`,`Восточная Сибирь`)
+					+item(`12`,`Дальний Восток`)
+
+	// end sRegions

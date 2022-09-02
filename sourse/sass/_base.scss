@@ -506,3 +506,9 @@ iframe {
 .fancybox__content :focus:not(.carousel__button.is-close){
 	outline: none !important;
 }
+
+.container{
+	padding-left: var(--c-g);
+	padding-right: var(--c-g);
+	max-width: 1600px;
+}
