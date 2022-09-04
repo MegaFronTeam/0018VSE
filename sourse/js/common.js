@@ -355,20 +355,64 @@ function eventHandler() {
 	const swiperbreadcrumb = new Swiper('.breadcrumb-slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
-		watchOverflow: true
+		watchOverflow: true,
+		
 	});
 	
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+	let sliderWraps = document.querySelectorAll(".headerBlock");
 
-	});
+	for (const sliderWrap of sliderWraps) {
+
+		const swiperFade = new Swiper(sliderWrap.querySelector('.slider--fade-js'), { 
+			slidesPerView: 1,
+			loop: true, 
+			effect: 'fade',
+			speed: 1000,
+			fadeEffect: {
+				crossFade: true
+			},
+			
+		});
+		
+		const swiperText = new Swiper(sliderWrap.querySelector('.slider--text-js'), { 
+			slidesPerView: 1,
+			loop: true,
+			effect: 'fade',
+			speed: 1000,
+			// fadeEffect: {
+			// 	crossFade: true
+			// },
+			navigation: {
+				nextEl: sliderWrap.querySelector('.swiper-button-next'),
+				prevEl: sliderWrap.querySelector('.swiper-button-prev'),
+			},
+			pagination: {
+				el: sliderWrap.querySelector(' .swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+				// renderBullet: function (index, className) {
+				// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+				// }
+			},
+			thumbs: {
+				swiper: swiperFade
+			},
+			on: {
+				slideChangeTransitionStart: (swiper) => {
+					// $(sliderWrap).find('div:not(.swiper-slide-active) .section-title--js2.active').removeClass('active');
+					// $(sliderWrap).find(' .swiper-slide-active .section-title--js2').addClass('active');
+					var r = sliderWrap;
+					var rs = getComputedStyle(r);
+					r.style.setProperty('--pagination-count', swiper.realIndex);
+				}
+			}
+		});
+
+
+		// swiperFade.controller.control = swiperText;
+		swiperText.controller.control = swiperFade;
+	}
+
 	// modal window
 
 };

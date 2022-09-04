@@ -3,23 +3,36 @@
 
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		@include roww(2rem);
 		flex-wrap: wrap;
 	}
 
 	list-style: none;
 	position: relative;
+	// margin-bottom: 0;
+	// max-width: 100%;
 	margin-bottom: 0;
-	max-width: 100%;
+	padding-bottom: 0;
+	ul{
+	}
 	li{
 		
 		// margin-left: 0;
 		// margin-right: 0;
-		padding: 0;
+		// padding: 0;
+		padding-bottom: 0;
 	}
 	a{
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: rem(18) 0;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: rem(14);
+		color: $body-color;
+		&:hover,
+		&.active{
+			color: $danger;
+		}
 	}
 }
 

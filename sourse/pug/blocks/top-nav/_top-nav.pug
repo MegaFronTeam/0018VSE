@@ -21,13 +21,11 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
+			.menu-mobile.menu-mobile--js
+				.menu-mobile__inner
 					+menu-toggle()
+					+mnu()
+			.d-none.d-lg-block
+				+b.search-toggle
+					+icon("search")
 	// end top-nav

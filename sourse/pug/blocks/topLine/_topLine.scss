@@ -1,7 +1,21 @@
 
 	// start .topLine
 	.topLine {
-		 
+		color: #fff;
+		background-color: $primary;
+		.row{
+			align-items: center;
+		}
+		padding-top: rem(4);
+		padding-bottom: rem(4);
+		&__col{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img{
+				margin-right: rem(10);
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

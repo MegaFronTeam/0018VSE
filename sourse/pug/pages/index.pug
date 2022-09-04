@@ -19,17 +19,17 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= index.head.title
+	- let  title= '1-1 Главная'
 	title= title
 block pagecontent
 	//- +mob-mnu()
 	
-
-	//- +top-nav()
-	//- +topLine
-	//- +headerBlock 
+	header.header
+		+topLine
+		+top-nav()
+	+headerBlock 
 	+sRegions
-	
+	+headerBlock2()
 	+footer()
       
 

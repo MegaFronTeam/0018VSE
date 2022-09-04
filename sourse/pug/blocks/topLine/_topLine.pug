@@ -1,9 +1,20 @@
 mixin topLine()
 	// start topLine
-	+b.topLine.section#topLine&attributes(attributes)
+	+b.topLine#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
 			.row
+				.col
+					+img("img/logo-1.svg")
+				+e.col.col-auto
+					
+					+img("img/logo-center.svg")
+					+e.text Регионы России  
+						span в&nbsp;исторической перспективе
+				.col.text-end
+					+img("img/logo-2.svg")
+				.col-auto.d-md-none
+					+b.search-toggle
+						+icon("search")
+				.col-auto.d-md-none
+					+menu-toggle()
 	// end topLine

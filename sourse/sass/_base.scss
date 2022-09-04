@@ -301,8 +301,8 @@ ul {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
-	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
+	background-color: none;
+	// border: 2px solid var(--swiperBorderColorDef);
 	color: var(--swiperColorDef);
 	@include bgs;
 	z-index: 300;
@@ -316,13 +316,15 @@ ul {
 	user-select: none;
 
 	&:hover {
-		background-color: var(--swiperBgDefHover);
-		border-color: var(--swiperBorderColorDefHover);
-		color: var(--swiperColorDefHover);
+		// background-color: var(--swiperBgDefHover);
+		// border-color: var(--swiperBorderColorDefHover);
+		// color: var(--swiperColorDefHover);
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(32);
+		fill: none;
+		stroke: currentColor;
 	}
 
 	&::after {
@@ -511,4 +513,46 @@ iframe {
 	padding-left: var(--c-g);
 	padding-right: var(--c-g);
 	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.search-toggle{
+	cursor: pointer;
+	.icon{
+		font-size: rem(24);
+		stroke: currentColor;
+		stroke-width: 2px;
+		fill: none;
+	}
+}
+
+
+.section-title--js2{
+	&:not(.active) {
+		
+	}
+	// @include mt(.6s);
+	// transform: translate3d(0, 60px, 0);
+	opacity: 0;
+}
+.swiper-slide-active .section-title--js2{
+	// transform: translate3d(0, 0, 0);
+	// opacity: 1;
+	animation:  slideAn .4s linear;
+	animation-fill-mode: both;
+	// animation-fill-mode: normal;
+	
+}
+
+@keyframes  slideAn{
+	from {
+		transform: translate3d(0, 30px, 0);
+		opacity: 0;
+	}
+	to{
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+
+	}
 }
