@@ -2,19 +2,19 @@ mixin topLine()
 	// start topLine
 	+b.topLine#topLine&attributes(attributes)
 		.container
-			.row
-				.col
+			+e.row.row
+				.col.d-none.d-lg-block
 					+img("img/logo-1.svg")
 				+e.col.col-auto
 					
 					+img("img/logo-center.svg")
 					+e.text Регионы России  
 						span в&nbsp;исторической перспективе
-				.col.text-end
+				.col.text-end.d-none.d-lg-block
 					+img("img/logo-2.svg")
-				.col-auto.d-md-none
+				.col-auto.d-lg-none.ms-auto
 					+b.search-toggle
 						+icon("search")
-				.col-auto.d-md-none
+				.col-auto.d-lg-none
 					+menu-toggle()
 	// end topLine

@@ -8,7 +8,7 @@
 	}
 
 	@include media-breakpoint-up(xl) {
-		--bs-body-font-size: calc(#{$em-base}   + .12vw + .12vh);
+		--bs-body-font-size: calc(13.5px   + .12vw + .12vh);
 
 		--sPT: #{rem(94)};
 		--sPB: #{rem(94)};

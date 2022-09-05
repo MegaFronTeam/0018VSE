@@ -1,9 +1,44 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-sm-6.col-lg
+					+e.logo(href="/")
+						+img('img/logo-center.svg')
+						p #[span Регионы России ] в&nbsp;исторической перспективе
+				.col-sm-6.col-lg
+					+e.title Контакты
+					+e.info
+						+icon('map-pin')
+						| Россия, 101000, г. Москва, ул. Мясницкая, д. 20
+					+e.info(href="mailto:regionalhist@hse.ru")
+						+icon('mail')
+						| regionalhist@hse.ru
+					+e.info(href="tel:+74957713232")
+						+icon('phone')
+						| +7 (495) 771-32-32
+					+e.info(href="tel:+74956287931")
+						+icon('printer')
+						| +7 (495) 628-79-31
+				.col-sm-6.col-lg
+					+e.title Другое
+					+e.info(href="#") О лаборатории
+					+e.info(href="#") Фонд Михаила Прохорова
+					+e.info(href="#") НИУ Высшая школа экономики
+				.col-sm-6.col-lg-auto
+					+e.title Подпишитесь на наши новости
+					+b.form-wrap
+						+input('E-mail', 'email')
+						+e.btn.BUTTON.btn.btn-danger Подписаться
+					+e.policy Нажимая «Подписаться» вы соглашаетесь с #[a(href="#") обработкой персональных данных ]
+			+e.info-row.row
+				.col-sm-6.col-lg
+					+e.name © #[span ] Высшая школа экономики
+				.col-sm-6.col-lg
+					+e.link(href="#") Условия пользованя материалов
+				.col-sm-6.col-lg
+					+e.link(href="#") Политика конфиденциальности
+				.col-sm-6.col-lg-auto
+					+e.link(href="#") 
+						+img('img/svg/designLogo.svg')
+						| Сделано в Coalla Agency

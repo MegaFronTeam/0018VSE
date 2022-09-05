@@ -295,6 +295,7 @@ function eventHandler() {
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
+	JSCCommon.getCurrentYear('.footer__name span');
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 	
@@ -414,7 +415,13 @@ function eventHandler() {
 	}
 
 	// modal window
-
+	document.addEventListener('mouseup', (event) => {
+		let popup = event.target.closest('.success');
+		let cross = event.target.closest('.success__cross');
+		if (cross) {
+			$(popup).fadeOut();
+		};
+	}, { passive: true });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

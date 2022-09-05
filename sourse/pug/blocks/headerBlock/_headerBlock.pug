@@ -24,7 +24,7 @@ mixin headerBlock()
 	// end headerBlock
 mixin headerBlock2()
 	// start headerBlock
-	+b.headerBlock&attributes(attributes)
+	+b.headerBlock--2&attributes(attributes)
 		.container.p-0
 			.row.g-0
 				+e.text-wrap.bg-danger.col-lg-6
@@ -32,17 +32,21 @@ mixin headerBlock2()
 						+arrow
 					+b.slider--text-js.swiper
 						.swiper-wrapper
-							- for (var x = 0; x < 3; x++)
+							- for (var x = 0; x < 4; x++)
 								+e.slide.swiper-slide
 									.section-title--js2
-										+e.title Наталия Киприянова
-										+e.text.mono Наталия Киприянова Социокультурный облик российского купечества  (по материалам Уложенной комиссии 1767 г.)
+										+e.img
+											+img('img/avatar-1.jpg')
+										+e.title Евгений Крестьянников
+										+e.subtile Доктор исторических наук, Тюменский государственный университет
+										+e.text.mono Пространства vs&nbsp;империя: география и&nbsp;пути судебной власти Сибири в&nbsp;позднеимперский период
 					.swiper-pagination
 				.col-lg-6
 					+b.slider--fade-js.swiper
 						.swiper-wrapper
-							- for (var x = 0; x < 3; x++)
-								+e.slide.bg-wrap.swiper-slide
+							- for (var x = 0; x < 4; x++)
+								+e.slide--video.bg-wrap.swiper-slide(data-src='https://www.youtube.com/embed/L_LUpnjgPso' data-fancybox=`video-${x}`)
 									+img("img/slide.jpg",'bg')
-									
+									+e.video-button
+										+img('img/svg/play.svg')
 	// end headerBlock

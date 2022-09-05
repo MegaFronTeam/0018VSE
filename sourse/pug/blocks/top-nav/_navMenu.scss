@@ -21,6 +21,7 @@
 		// margin-right: 0;
 		// padding: 0;
 		padding-bottom: 0;
+		position: relative;
 	}
 	a{
 		display: block;
@@ -40,8 +41,8 @@
 
 .toggle-menu-mobile {
 	--h: #{em(2)};
-	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--color: #{#fff};
+	--position: calc(var(--h) * 3);
 	&.on span {
 		--color: transparent;
 	}
@@ -53,7 +54,7 @@
 	display: block;
 	height: calc(var(--h)* 12);
 	position: relative; 
-	font-size: 32px;
+	font-size: 18px;
 	width: 1em;
 	cursor: pointer;
 	span:after,
@@ -65,16 +66,19 @@
 	span {
 		@include a-cent(y);
 		display: block;
+		border-radius: 8px;
 	}
 
 	span:before { 
 		top: var(--position);
 		transform: rotate3d(0,0,1, var(--rotate, 0));
+		border-radius: 8px;
 	}
 
 	span:after {
 		bottom: var(--position);
 		transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
+		border-radius: 8px;
 	}
 	span,
 	span:after,
@@ -161,5 +165,52 @@
 
 			}
 		}
+	}
+}
+.menu-item-has-children{
+	display: flex;
+	@include media-breakpoint-up(lg) {
+		&:hover .sub-menu{
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
+	@include media-breakpoint-down(lg) {
+		
+		width: 100%;
+		flex-wrap: wrap;
+	}
+	position: relative;
+	align-items: center;
+}
+.sub-menu{
+	@include mt;
+	// display: none;
+	order: 1;
+	min-width: 100%;
+	z-index: 20;
+	list-style-type: none;
+	columns: 2;
+	padding: rem(8);
+	@include media-breakpoint-up(lg) {
+		// display: none !important;
+		// display: block !important;
+		position: absolute;
+		left: 0;
+		top: 100%;
+		min-width: 350px;
+		background-color: #fff;
+		border: 1px solid #dbdbdb;
+		text-align: left;
+    // padding: 1rem 0;
+
+		opacity: 0;
+		pointer-events: none;
+	}
+	a {
+		padding: rem(4) rem(9);
+		font-size: rem(16);
+		font-weight: 400;
+		text-transform: initial;
 	}
 }

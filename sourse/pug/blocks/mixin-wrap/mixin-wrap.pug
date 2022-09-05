@@ -45,3 +45,9 @@ mixin page-head(t,...items)
 			+breadcrumb('Главная',...items)
 
 			h1= t
+
+mixin success()
+	+b.success
+		+e.cross
+		+e.title Вы успешно подписаны на нашу рассылку
+		p Теперь Вы&nbsp;всегда будете вкурсе всех новостей нашего портала
