@@ -4,7 +4,7 @@ mixin mnu()
 		each link in nav
 			li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
 			if link.subnav
-				li.menu-item.menu-item-has-children
+				li.menu-item.menu-item-has-children.active
 					a(href="#" itemprop="url") О нас
 					ul.sub-menu
 						each sublink in link.subnav

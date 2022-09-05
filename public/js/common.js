@@ -422,6 +422,12 @@ function eventHandler() {
 			$(popup).fadeOut();
 		};
 	}, { passive: true });
+
+	$(".menu-item-has-children>a ").on("click", function(e){
+		e.preventDefault();
+		$(this).parent().toggleClass("active")
+		$(this).next().slideToggle()
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

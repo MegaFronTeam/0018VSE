@@ -85,8 +85,10 @@ body {
 		z-index: 999;
 
 		&::before {
-			z-index: 999;
-			opacity: 0.76;
+			z-index: 11;
+			background-color: rgba($color: #002D6E, $alpha: .8);
+			opacity: 1;
+			// opacity: 0.76;
 		}
 	}
 }

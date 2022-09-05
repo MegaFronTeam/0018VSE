@@ -7,9 +7,11 @@
 		position: fixed;
 		bottom: 0;
 		left: 0;
-		z-index: 310;
+		z-index: 3310;
 		width: 100%;
 		box-shadow: 0px 0px 34px 3px rgba(0, 0, 0, 0.16);
+		padding-top: rem(10);
+		padding-bottom: rem(10);
 	}
 	&__row{
 		align-items: center;

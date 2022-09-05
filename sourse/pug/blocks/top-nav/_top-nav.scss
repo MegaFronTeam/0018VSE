@@ -1,5 +1,6 @@
 .top-nav {
 	border-bottom: 1px solid #002D6E;
+	position: relative;
 	.container{
 
 		display: flex;
@@ -8,6 +9,13 @@
 	}
 	.search-toggle{
 		margin-left: 2rem;
+	}
+	&__logos {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: rem(16) rem(16) rem(8);
+		border-top: 1px solid #E9E9E9;
 	}
 	@include media-breakpoint-up(md) {}
 

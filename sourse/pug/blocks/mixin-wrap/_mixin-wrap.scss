@@ -117,13 +117,15 @@
 	background-color: $danger;
 	position: fixed;
 	right: 0;
-	top: 4.4%;
 	z-index: 50;
 	color: #fff;
 	width: 100%;
+	bottom: 56px;
 	@include media-breakpoint-up(sm) {
 		max-width: rem(368);
 		right: 8px;
+		bottom: unset;
+		top: 4.4%;
 	}
 	&__title {
 		font-weight: 600;
