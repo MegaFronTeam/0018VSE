@@ -366,7 +366,7 @@ function eventHandler() {
 
 		const swiperFade = new Swiper(sliderWrap.querySelector('.slider--fade-js'), { 
 			slidesPerView: 1,
-			loop: true, 
+			rewind: true, 
 			effect: 'fade',
 			speed: 1000,
 			fadeEffect: {
@@ -377,7 +377,7 @@ function eventHandler() {
 		
 		const swiperText = new Swiper(sliderWrap.querySelector('.slider--text-js'), { 
 			slidesPerView: 1,
-			loop: true,
+			rewind: true,
 			effect: 'fade',
 			speed: 1000,
 			// fadeEffect: {
@@ -398,15 +398,11 @@ function eventHandler() {
 			thumbs: {
 				swiper: swiperFade
 			},
-			on: {
-				slideChangeTransitionStart: (swiper) => {
-					// $(sliderWrap).find('div:not(.swiper-slide-active) .section-title--js2.active').removeClass('active');
-					// $(sliderWrap).find(' .swiper-slide-active .section-title--js2').addClass('active');
-					var r = sliderWrap;
-					var rs = getComputedStyle(r);
-					r.style.setProperty('--pagination-count', swiper.realIndex);
-				}
-			}
+			scrollbar: {
+				el: sliderWrap.querySelector(".swiper-scrollbar"),
+				// hide: true,
+				draggable: true,
+			},
 		});
 
 

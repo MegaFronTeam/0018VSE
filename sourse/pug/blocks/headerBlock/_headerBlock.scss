@@ -74,11 +74,17 @@
 	}
 	.slider--text-js{
 		max-width: rem(514);
-		margin-bottom: 2rem;
+		// pb
+		padding-bottom: 2rem;
+		.swiper-slide{
+
+			padding-bottom: 2rem;
+		}
 	}
 	
 	.swiper-pagination{
 		position: relative;
+		bottom: auto;
 		height: 2px;
 		max-width: rem(514);
 		background-color: rgba($color: #fff, $alpha: .4);
@@ -174,4 +180,23 @@
 	.swiper-slide{
 		height: auto;
 	}
+}
+.swiper-scrollbar-drag{
+	background-color: #fff;
+	border-radius: 0;
+	cursor: pointer;
+	&::before{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: -6px;
+		height: 14px;
+		width: 100%;
+	}
+}
+.swiper-scrollbar{
+	background-color: rgba($color: #fff, $alpha: .4);
+}
+.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+	height: 2px;
 }
