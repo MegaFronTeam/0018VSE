@@ -2,6 +2,7 @@
 .headerBlock {
 	text-align: center;
 	color: #fff;
+	border-bottom: 1px solid $primary;
 	&__text-wrap{
 		display: flex;
 		// justify-content: center;

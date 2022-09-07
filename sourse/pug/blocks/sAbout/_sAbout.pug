@@ -4,4 +4,73 @@ mixin sAbout(data)
 		+b.section-title
 			p Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet. Vivamus nec velit volutpat quam laoreet lobortis a&nbsp;sed est. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo pulvinar tincidunt et&nbsp;vel enim.
 			p Quisque ut&nbsp;consectetur risus, in&nbsp;rhoncus urna. Aenean pellentesque, velit id&nbsp;suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo pulvinar tincidunt et&nbsp;vel enim. Cras at&nbsp;nulla massa. Nulla metus enim, consequat eu&nbsp;ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+		+e.content
+			h2 Fusce sed auctor nibh
+			p Quisque ut&nbsp;consectetur risus, in&nbsp;rhoncus urna. Aenean pellentesque, velit id&nbsp;suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. #[a(href="#") Donec non purus ] venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo pulvinar tincidunt et&nbsp;vel enim. Cras at&nbsp;nulla massa. Nulla metus enim, consequat eu&nbsp;ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+			+e.UL.list
+				li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida 
+				li Lorem ipsum dolor sit amet, consectetu
+					ul 
+						li Lorem ipsum dolor sit 
+						li Lorem ipsum do.
+				li Lorem ips
+			+b.mediaContent
+				+e.img-wrap
+					+img('img/sAbout-img-1.jpg')
+				span Description
+			mixin articleTable(th1, th2, th3, th4)
+				+e.tableWrap
+					table
+						thead
+							tr
+								th(scope='col')!= th1
+								th(scope='col')!= th2
+								th(scope='col')!= th3
+								th(scope='col')!= th4
+						tbody
+							block
+
+			mixin articleTableContent(thead, td1, td2, td3)
+				tr
+					th(scope='row')!= thead
+					td!= td1
+					td!= td2
+					td!= td3
+			h6 H6 Header two line words description
+			+articleTable('Maecenas', 'Phasellus', 'Gravida', 'Integer')
+				+articleTableContent('Nullam', 'Tincidunt', 'Tincidunt', 'Dapibus')
+				+articleTableContent('Luctus', 'Mauris', 'Felis', 'Aenean')
+				+articleTableContent('Dignissim', 'Vestibulum', 'Fusce', 'Donec')
+			+b.BLOCKQUOTE 
+				h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida magna ac vehicula volutpat. Nam non aliquam magna. Etiam et consectetur purus.
+				cite Оксана Богомолова
+			h3 H3 Header two line words description
+			p Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo #[a(href="#") pulvinar tincidunt et vel enim ]. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+			+e.OL.number-list
+				li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida 
+				li Lorem ipsum dolor sit amet, consectetu
+					ol
+						li Lorem ipsum dolor sit 
+						li Lorem ipsum do.
+				li Lorem ips
+			h4 H4 Header two line words description
+			h5 H5 Header two line words description
+			p Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+			+b.mediaContent
+				mixin slide(i)
+					+e.slide.swiper-slide
+						+e.item
+							+img(`img/sAbout-img-${i}.jpg`, `bg`)
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+slide(2)
+						+slide(1)
+						+slide(2)
+						+slide(1)
+					.swiper-scrollbar
+					+arrow()
+				span Description
+			+b.mediaContent.mb-0 
+				+e.video-wrap
+					<iframe src="https://www.youtube.com/embed/L_LUpnjgPso" title="Fireplace 10 hours full HD"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	// end sAbout
