@@ -8,7 +8,7 @@ mixin sRegions(data)
 			+e.row.row
 				mixin item(i, t)
 					+e.col.col-12.col-sm-6.col-md-12
-						+b.region-item(href="#").bg-wrap
+						+b.region-item.animate(href="#"  data-aos="fade-up").bg-wrap
 							+img(`img/region-${i}.jpg`,bg).picture-bg
 							+e.title= t
 				- for (var x = 0; x < 1; x++)
