@@ -38,6 +38,13 @@ mixin search()
 			button 
 				+icon("search")
 
+mixin main-page-head(img, title)
+	+b.main-page-head.bg-wrap
+		+e.img-wrap.picture-bg
+			+img(`img/${img}`, 'bg')
+		.container.p-0
+			h1!= title
+
 mixin page-head(t,...items)
 	+b.page-head
 		- let l = items.length

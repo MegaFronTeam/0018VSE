@@ -3,8 +3,12 @@
 	--animate-delay: 1.2s;
 	
 	// --bs-body-font-size: #{$em-base};
+	--sMB: #{rem(24)};
+	@include media-breakpoint-up(md) {
+		--sMB: #{rem(170)};
+	}
 	@media (min-width: 2400px) {
-		--bs-body-font-size: calc(#{$em-base}   + .35vw + .35vh); 
+		--bs-body-font-size: calc(13.5px   + .35vw + .35vh); 
 	}
 
 	@include media-breakpoint-up(xl) {
