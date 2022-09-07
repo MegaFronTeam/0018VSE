@@ -444,6 +444,8 @@ function eventHandler() {
 			prevEl: '.swiper-button-prev',
 		},
 	});
+
+	AOS.init();
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
