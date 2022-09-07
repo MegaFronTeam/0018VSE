@@ -38,6 +38,9 @@
 		.icon {
 			@include mt;
 			vertical-align: bottom;
+			@include media-breakpoint-up(lg) {
+				vertical-align: text-bottom;
+			}
 		}
 		&:hover,
 		&.active{
@@ -212,7 +215,7 @@
 	align-items: center;
 	& > a {
 		.icon {
-			font-size: 24px;
+			font-size: 21px;
 		}
 	}
 	@include media-breakpoint-down(lg) {
