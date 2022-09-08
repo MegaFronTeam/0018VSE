@@ -248,6 +248,17 @@
 		option {
 			color: $body-color;
 		}
+		&.active {
+			border-color: $body-color;
+			background-color: $body-color;
+			color: #fff;
+			option {
+				color: #fff;
+			}
+			&:focus {
+				border-color: $body-color;
+			}
+		}
 	}
 	&--filter {
 		@include media-breakpoint-down(md) {
