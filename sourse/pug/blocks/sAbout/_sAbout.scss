@@ -99,9 +99,12 @@
 	}
 	&__tableWrap {
 		margin-bottom: rem(53);
+		position: relative;
+		overflow: auto;
 	}
 	table {
 		width: 100%;
+		min-width: rem(422);
 		thead {
 			th {
 				color: $gray-300;

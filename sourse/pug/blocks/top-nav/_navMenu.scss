@@ -37,17 +37,14 @@
 		line-height: 1.7em;
 		.icon {
 			@include mt;
-			vertical-align: bottom;
-			@include media-breakpoint-up(lg) {
-				vertical-align: text-bottom;
-			}
+			vertical-align: top;
 		}
 		&:hover,
 		&.active{
 			color: $danger;
 			.icon {
-				color: $danger;
 				@include media-breakpoint-up(lg) {
+					color: $danger;
 					transform: rotate(-180deg);
 				}
 			}
@@ -210,15 +207,14 @@
 		
 		width: 100%;
 		flex-wrap: wrap;
-	}
-	position: relative;
-	align-items: center;
-	& > a {
-		.icon {
-			font-size: 21px;
+		& > a {
+			max-width: max-content;
+			display: flex;
+			align-items: center;
+			&:hover {
+				color: $body-color;
+			}
 		}
-	}
-	@include media-breakpoint-down(lg) {
 		&.active {
 			& > a {
 				color: $danger;
@@ -227,13 +223,12 @@
 				}
 			}
 		}
-		& > a {
-			max-width: max-content;
-			display: flex;
-			align-items: center;
-			// &:focus {
-			// 	color: currentColor;
-			// }
+	}
+	position: relative;
+	align-items: center;
+	& > a {
+		.icon {
+			font-size: 21px;
 		}
 	}
 }

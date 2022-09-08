@@ -38,12 +38,23 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin main-page-head(img, title)
-	+b.main-page-head.bg-wrap
+mixin main-page-head(img, title, filter)
+	+b.main-page-head.bg-wrap&attributes(attributes)
 		+e.img-wrap.picture-bg
 			+img(`img/${img}`, 'bg')
 		.container.p-0
 			h1!= title
+			if filter
+				+e.filter
+					+e.filter-row.row
+						.col-md-auto
+							+input('Все', 'select', 'Регионы')
+						.col-md-auto
+							+input('Все', 'select', 'Регионы')
+						.col-md-auto
+							+input('Все', 'select', 'Регионы')
+						.col-md-auto
+							+input('Все', 'select', 'Регионы')
 
 mixin page-head(t,...items)
 	+b.page-head
