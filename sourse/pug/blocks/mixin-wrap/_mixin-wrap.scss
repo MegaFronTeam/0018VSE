@@ -289,7 +289,10 @@
 	margin-right: auto;
 	max-width: rem(1010);
 	@include media-breakpoint-up(md) {
-		padding: rem(52) rem(103) rem(42);
+		padding: rem(40) rem(48) rem(42);
 		margin-top: calc((var(--sMB) - rem(24)) * -1);
+	}
+	&--about {
+		padding: rem(52) rem(103) rem(42);
 	}
 }
