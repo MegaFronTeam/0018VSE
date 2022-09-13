@@ -69,3 +69,70 @@ mixin success()
 		+e.cross
 		+e.title Вы успешно подписаны на нашу рассылку
 		p Теперь Вы&nbsp;всегда будете вкурсе всех новостей нашего портала
+
+mixin sMaterialsTootlip(text, icon)
+	+e.tooltip-wrap
+		+e.tooltip-hover!= text
+		+icon(icon)
+
+mixin sMaterialsItem(img, title, text, date, name, ...items)
+	+e.col.col-12.col-md-6.col-lg-4&attributes(attributes)
+		+b.sMaterials-item
+			block
+			+e.img-wrap
+				img(src=`img/${img}`)
+			+e.content 
+				if name
+					+e.name!= name
+				.h4!= title 
+				+e.text(href="#")!= text
+				+e.date!= date
+				+e.inner-row.row
+					each item in items
+						+e.inner-col--shown.col-auto
+							+e.link(href="#")!= item
+					+e.inner-col--js.col-auto
+						+e.link--js: +icon('more-horizontal')
+						+e.show-more
+							+e.inner-row.row
+								.col-auto
+									+e.link(href="#") Управление
+								.col-auto
+									+e.link(href="#") Освоение
+								.col-auto
+									+e.link(href="#") Люди
+								.col-auto
+									+e.link(href="#") Пограничье
+								.col-auto
+									+e.link(href="#") Образы территории
+
+mixin sMaterialsItemSecond(img, title, text, date, name, ...items)
+	+e.col.col-12.col-sm-6
+		+b.sMaterials-item--second.bg-wrap
+			block
+			+e.img-wrap.picture-bg
+				img(src=`img/${img}`)
+			+e.content 
+				if name
+					+e.name!= name
+				.h5!= title 
+				+e.text(href="#")!= text
+				+e.date!= date
+				+e.inner-row.row
+					each item in items
+						+e.inner-col--shown.col-auto
+							+e.link(href="#")!= item
+					+e.inner-col--js.col-auto
+						+e.link--js: +icon('more-horizontal')
+						+e.show-more
+							+e.inner-row.row
+								.col-auto
+									+e.link(href="#") Управление
+								.col-auto
+									+e.link(href="#") Освоение
+								.col-auto
+									+e.link(href="#") Люди
+								.col-auto
+									+e.link(href="#") Пограничье
+								.col-auto
+									+e.link(href="#") Образы территории

@@ -5,7 +5,7 @@
 	--bs-body-font-size: 14px;
 	--sMB: #{rem(24)};
 	@include media-breakpoint-up(md) {
-		--sMB: #{rem(170)};
+		--sMB: #{rem(157)};
 	}
 	@media (min-width: 2400px) {
 		--bs-body-font-size: calc(13.5px   + .35vw + .35vh); 

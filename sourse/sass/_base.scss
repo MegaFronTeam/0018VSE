@@ -576,3 +576,27 @@ iframe {
 		max-height: 100%;
 	}
 }
+
+.pagination-wrapper {
+	ul {
+		li {
+			&:not(:last-child) {
+				margin-right: rem(8);
+			}
+			a, span {
+				display: flex !important;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+	.next, .prev {
+    --bs-pagination-padding-x: #{rem(4)};
+    --bs-pagination-padding-y: 0;
+		height: 100%;
+		.icon {
+			flex: 0 0 auto;
+			font-size: rem(24);
+		}
+	}
+}

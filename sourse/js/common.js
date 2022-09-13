@@ -447,16 +447,16 @@ function eventHandler() {
 
 	AOS.init();
 
-	let sMaterialsItems = document.querySelectorAll('.sMaterials__item');
+	let sMaterialsItems = document.querySelectorAll('.sMaterials-item');
 	if (sMaterialsItems) {
 		for (const sMaterialsItem of sMaterialsItems) {
-			let links = sMaterialsItem.querySelectorAll('.sMaterials__inner-col--shown');
+			let links = sMaterialsItem.querySelectorAll('.sMaterials-item__inner-col--shown');
 			if (links.length > 4) {
-				let showMore = sMaterialsItem.querySelector('.sMaterials__inner-col--js');
+				let showMore = sMaterialsItem.querySelector('.sMaterials-item__inner-col--js');
 				showMore.classList.add('active');
 			};
 		}
-		let sMaterialsLinks = document.querySelectorAll('.sMaterials__link--js');
+		let sMaterialsLinks = document.querySelectorAll('.sMaterials-item__link--js');
 		for (const sMaterialsLink of sMaterialsLinks) {
 			sMaterialsLink.addEventListener('click', function() {
 				if (window.innerWidth <= 768) {
@@ -467,6 +467,9 @@ function eventHandler() {
 		}
 	}
 
+	// var $grid = $('.sMaterials__row--js').masonry({
+	// 	itemSelector: '.col--js',
+	// });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
@@ -474,10 +477,22 @@ if (document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
+// $(window).load(function() {
+// 	var $grid = $('.sMaterials__row--js').masonry({
+// 		itemSelector: '.col--js',
+// 	});
+// });
+
+window.onload = function () {
+	var $grid = $('.sMaterials__row--js').masonry({
+		itemSelector: '.col--js',
+	});
+	// let sMaterialsLinks = document.querySelectorAll('.sMaterials__link--js');
+	// 	for (const sMaterialsLink of sMaterialsLinks) {
+	// 		sMaterialsLink.addEventListener('click', function() {
+	// 			if (window.innerWidth <= 768) {
+	// 				$grid.masonry('reloadItems');
+	// 			}
+	// 		});
+	// 	}
+}

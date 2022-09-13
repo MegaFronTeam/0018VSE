@@ -1,0 +1,38 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRegions/_sRegions.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sPersonalities/_sPersonalities.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '4-1-personalities.jpg'
+
+block title
+	- let  title= '4-1 Персоналии'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	header.header
+		+topLine
+		+top-nav()
+	+main-page-head('page-head-bg-3.jpg', 'Персоналии')
+	.main-block.container
+		+sPersonalities
+	+footer()
+      
+
+
+
