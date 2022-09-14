@@ -143,6 +143,12 @@
 	blockquote {
 		margin-bottom: rem(55);
 		position: relative;
+		padding-left: 20px;
+		@include media-breakpoint-up(lg) {
+			width: 110%;
+			margin-left: -5%;
+			padding-left: 0;
+		}
 		&::before {
 			content: '';
 			position: absolute;
@@ -151,13 +157,18 @@
 			width: 4px;
 			background-color: $red;
 			top: 0;
-			left: -20px;
+			left: 0;
+			@include media-breakpoint-up(lg) {
+				left: -20px;
+			}
 		}
 		h4 {
 			margin-bottom: rem(8);
 			font-weight: 400;
+			font-family: $font-family-monospace;
 		}
 		cite {
+			font-style: normal;
 			font-size: rem(12);
 		}
 	}
@@ -209,6 +220,7 @@
 		}
 	}
 	h4, h5 {
+		font-family: $font-family-monospace;
 		font-weight: 400;
 		margin-bottom: rem(24);
 	}

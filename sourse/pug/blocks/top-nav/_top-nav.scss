@@ -1,6 +1,8 @@
 .top-nav {
-	border-bottom: 1px solid #002D6E;
 	position: relative;
+	@include media-breakpoint-up(lg) {
+		border-bottom: 1px solid #002D6E;
+	}
 	.container{
 
 		display: flex;

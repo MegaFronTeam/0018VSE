@@ -13,6 +13,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sRegions/_sRegions.pug
 include ../blocks/footer/_footer.pug
+include ../blocks/sRegionsContent/_sRegionsContent.pug
 include ../blocks/sMaterials/_sMaterials.pug
 
 block variables
@@ -20,7 +21,7 @@ block variables
 	- let  bg= '2-1-about.jpg'
 
 block title
-	- let  title= '3-2 Материалы'
+	- let  title= '6-1 Регионы'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -28,9 +29,7 @@ block pagecontent
 	header.header
 		+topLine
 		+top-nav()
-	+main-page-head('page-head-bg-2.jpg', 'Материалы', true).main-page-head--filter
-	.main-block.container
-		+sMaterialsGrid
+	+sRegionsContent
 	+footer()
       
 

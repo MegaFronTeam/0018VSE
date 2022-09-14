@@ -1,21 +1,18 @@
 // start .sSpecialProjects
 .sSpecialProjects {
 	--sPT: #{rem(0)};
-	// --sPB: #{rem()};
+	--sPB: #{rem(13)};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(38)};
+	}
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-
-	}
-	.section-title{
-		
-	}
-	&__col{
-
-	}
-	&__item{
-
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(64);
+		}
 	}
 	&__tooltip-wrap {
 		display: flex;
@@ -70,6 +67,11 @@
 			bottom: -5px;
 			left: 50%;
 			transform: translateX(-50%) rotate(45deg);
+		}
+	}
+	.pagination-wrapper {
+		ul {
+			justify-content: center;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

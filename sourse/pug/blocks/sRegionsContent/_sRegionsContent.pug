@@ -1,0 +1,96 @@
+mixin sRegionsContent(data)
+	// start sRegionsContent
+	+b.SECTION.sRegionsContent.section#sRegionsContent.tabs&attributes(attributes)
+		+e.container.container.p-0
+			+e.head
+				+e.img-wrap
+					+img('img/region-1.jpg')
+				+e.head-content
+					h1 Европейский север
+					.tabs__caption
+						.tabs__btn.active О регионе
+						.tabs__btn Материалы
+			+e.body--content.tabs__content.active
+				+b.section-title
+					p Густые леса, океанский прибой, китайские мигранты, японские суши-бары, военные корабли Тихоокеанского флота в&nbsp;заливе Золотой Рог, женьшень, тигры, орлы, киты&nbsp;&mdash; вот лишь немногое, что у&nbsp;нас ассоциируется с&nbsp;российским Дальним Востоком. Это край прекрасных пейзажей и&nbsp;ворота из&nbsp;России в&nbsp;Восточную Азию. Густые леса, океанский прибой, китайские мигранты, японские суши-бары, военные корабли Тихоокеанского флота в&nbsp;заливе Золотой Рог, женьшень, тигры, орлы, киты&nbsp;&mdash; вот лишь немногое, что у&nbsp;нас ассоциируется с&nbsp;российским Дальним Востоком. Это край прекрасных пейзажей и&nbsp;ворота из&nbsp;России в&nbsp;Восточную Азию.
+					p Густые леса, океанский прибой, китайские мигранты, японские суши-бары, военные корабли Тихоокеанского флота в&nbsp;заливе Золотой Рог, женьшень, тигры, орлы, киты&nbsp;&mdash; вот лишь немногое, что у&nbsp;нас ассоциируется с&nbsp;российским Дальним Востоком. Это край прекрасных пейзажей и&nbsp;ворота из&nbsp;России в&nbsp;Восточную Азию.
+				+e.content
+					h2 История региона
+					p Дать более точное определение региона гораздо сложнее. Начнем с&nbsp;вопроса: &laquo;А&nbsp;где именно он&nbsp;расположен?&raquo; Для большинства россиян Дальний Восток&nbsp;&mdash; это просто &laquo;другой конец страны&raquo; на&nbsp;границе с&nbsp;Китаем, у&nbsp;тихоокеанского побережья. Для некоторых это Амурская область и&nbsp;Приморский край, а&nbsp;может быть, только Владивосток и&nbsp;Хабаровск.
+					+e.UL.list
+						li История этого региона тоже довольно непроста. С&nbsp;древнейших времен он&nbsp;был покрыт девственными лесами и&nbsp;стал домом для коренных народов этой территории.
+						li Московские землепроходцы достигли Тихого океана в&nbsp;начале XVII века
+							ul 
+								li На&nbsp;севере она достигла Анадыря и&nbsp;Камчатки, а&nbsp;на&nbsp;юге&nbsp;&mdash; низовьев Уссури и&nbsp;Амура, и&nbsp;ненадолго проникла еще южнее, в&nbsp;Маньчжурию и&nbsp;на&nbsp;Ляодунский полуостров.
+								li На&nbsp;севере она достигла Анадыря и&nbsp;Камчатки, а&nbsp;на&nbsp;юге&nbsp;&mdash; низовьев Уссури и&nbsp;Амура, и&nbsp;ненадолго проникла еще южнее, в&nbsp;Маньчжурию и&nbsp;на&nbsp;Ляодунский полуостров.
+						li История этого региона тоже довольно непроста. С&nbsp;древнейших времен он&nbsp;был покрыт девственными лесами и&nbsp;стал домом для коренных народов этой территории.
+					+b.mediaContent
+						+e.img-wrap
+							+img('img/sAbout-img-1.jpg')
+						span Description
+					mixin articleTable(th1, th2, th3, th4)
+						+e.tableWrap
+							table
+								thead
+									tr
+										th(scope='col')!= th1
+										th(scope='col')!= th2
+										th(scope='col')!= th3
+										th(scope='col')!= th4
+								tbody
+									block
+
+					mixin articleTableContent(thead, td1, td2, td3)
+						tr
+							th(scope='row')!= thead
+							td!= td1
+							td!= td2
+							td!= td3
+					h6 Статистические данные региона
+					+articleTable('Maecenas', 'Phasellus', 'Gravida', 'Integer')
+						+articleTableContent('Nullam', 'Tincidunt', 'Tincidunt', 'Dapibus')
+						+articleTableContent('Luctus', 'Mauris', 'Felis', 'Aenean')
+						+articleTableContent('Dignissim', 'Vestibulum', 'Fusce', 'Donec')
+					+b.BLOCKQUOTE 
+						h4 На&nbsp;Дальнем Востоке всегда находились российские войска и&nbsp;флот, напоминая о&nbsp;том, что государству важна безопасность его дальневосточных границ.
+						cite Оксана Богомолова
+					h3 &laquo;А&nbsp;где именно он&nbsp;расположен?&raquo;
+					p Для российского правительства это огромный Дальневосточный федеральный округ. Вместе с&nbsp;другими округами он&nbsp;был создан в&nbsp;ходе #[a(href="#") административной реформы] 2000 года и&nbsp;простирается от&nbsp;восточного берега озера Байкал до&nbsp;Тихого океана, занимая почти&nbsp;41% территории Российской федерации, где живет всего&nbsp;18% ее&nbsp;населения.
+					+e.OL.number-list
+						li Дальний Восток
+						li Европейский север
+							ol
+								li Азиатский север
+								li Юг
+						li Центр
+					h4 Российская империя
+					h5 &laquo;А&nbsp;где именно он&nbsp;расположен?&raquo;
+					p Дальний Восток полон противоречий. Он&nbsp;обилен природными ресурсами, но&nbsp;малонаселен, удален от&nbsp;Москвы, но&nbsp;близок к&nbsp;Азии. Это пограничная зона и&nbsp;одновременно трамплин для взаимодействия России с&nbsp;другими странами. В&nbsp;начале 1900-х часто говорили о&nbsp;том, что надо &laquo;построить Россию на&nbsp;Амуре&raquo;. Во&nbsp;многих отношениях это строительство еще не&nbsp;закончено&nbsp;&mdash; строительство Дальнего Востока как региона России и&nbsp;как моста в&nbsp;Восточную Азию и&nbsp;отдаленные миры великого тихоокеанского бассейна.
+					+b.mediaContent
+						mixin slide(i)
+							+e.slide.swiper-slide
+								+e.item
+									+img(`img/sAbout-img-${i}.jpg`, `bg`)
+						+e.slider--js.swiper
+							.swiper-wrapper
+								+slide(2)
+								+slide(1)
+								+slide(2)
+								+slide(1)
+							.swiper-scrollbar
+							+arrow()
+						span Description
+					+b.mediaContent.mb-0 
+						+e.video-wrap
+							<iframe src="https://www.youtube.com/embed/L_LUpnjgPso" title="Fireplace 10 hours full HD"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			+e.body--links.tabs__content
+				+e.filter
+					+e.filter-row.row
+						.col-md-auto
+							+input('Все', 'select', 'Регионы').active
+						.col-md-auto
+							+input('Все', 'select', 'Регионы')
+						.col-md-auto
+							+input('Все', 'select', 'Регионы')
+				+sMaterials()
+	// end sRegionsContent

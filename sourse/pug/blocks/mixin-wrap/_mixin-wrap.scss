@@ -107,9 +107,17 @@
 	}
 }
 
-.breadcrumb-item{
-	width: auto;
-	margin-right: rem(32);
+.breadcrumb {
+	justify-content: center;
+	&-item {
+		width: auto;
+		// margin-right: rem(32);
+		&.active {
+			a {
+				color: $breadcrumb-active-color;
+			}
+		}
+	}
 }
 
 .success {
@@ -167,6 +175,7 @@
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
+	min-height: 120px;
 	@include media-breakpoint-up(md) {
 		min-height: rem(440);
 	}
@@ -486,6 +495,7 @@
 		min-height: rem(328);
 		display: flex;
 		flex-direction: column;
+		height: 100%;
 		@include media-breakpoint-up(md) {
 			min-height: rem(268);
 		}
@@ -512,9 +522,18 @@
 			&__content {
 				margin-top: auto;
 				padding-top: rem(40);
+				max-width: rem(422);
 				.h5 {
 					color: #fff;
 				}
+			}
+			&__name {
+				font-size: 11px;
+				font-weight: 600;
+				margin-bottom: rem(7);
+				text-transform: uppercase;
+				color: #fff;
+				letter-spacing: 1px;
 			}
 			&__text {
 				color: #fff;

@@ -3,3 +3,6 @@
 1. <https://megafronteam.github.io/0018VSE/public/3-1-materials.html>
 1. <https://megafronteam.github.io/0018VSE/public/3-2-materials.html>
 1. <https://megafronteam.github.io/0018VSE/public/4-1-personalities.html>
+1. <https://megafronteam.github.io/0018VSE/public/5-1-special-projects.html>
+1. <https://megafronteam.github.io/0018VSE/public/6-1-regions.html>
+1. <https://megafronteam.github.io/0018VSE/public/7-1-personality.html>

@@ -13,14 +13,14 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sRegions/_sRegions.pug
 include ../blocks/footer/_footer.pug
-include ../blocks/sMaterials/_sMaterials.pug
+include ../blocks/sPersonality/_sPersonality.pug
 
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= '2-1-about.jpg'
 
 block title
-	- let  title= '3-2 Материалы'
+	- let  title= '7-1 Личность'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -28,9 +28,10 @@ block pagecontent
 	header.header
 		+topLine
 		+top-nav()
-	+main-page-head('page-head-bg-2.jpg', 'Материалы', true).main-page-head--filter
+	+breadcrumb('Главная', 'Персоналии', 'Энгельгардт Александр Николаевич')
+	+main-page-head('page-head-bg-5.jpg')
 	.main-block.container
-		+sMaterialsGrid
+		+sPersonality
 	+footer()
       
 

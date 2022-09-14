@@ -43,7 +43,8 @@ mixin main-page-head(img, title, filter)
 		+e.img-wrap.picture-bg
 			+img(`img/${img}`, 'bg')
 		.container.p-0
-			h1!= title
+			if title
+				h1!= title
 			if filter
 				+e.filter
 					+e.filter-row.row
@@ -76,7 +77,7 @@ mixin sMaterialsTootlip(text, icon)
 		+icon(icon)
 
 mixin sMaterialsItem(img, title, text, date, name, ...items)
-	+e.col.col-12.col-md-6.col-lg-4&attributes(attributes)
+	+e.col.col-12.col-md-6.col-lg-4&attributes(attributes)(data-aos="fade-up")
 		+b.sMaterials-item
 			block
 			+e.img-wrap
@@ -107,7 +108,7 @@ mixin sMaterialsItem(img, title, text, date, name, ...items)
 									+e.link(href="#") Образы территории
 
 mixin sMaterialsItemSecond(img, title, text, date, name, ...items)
-	+e.col.col-12.col-sm-6
+	+e.col.col-12.col-md-6(data-aos="fade-up")
 		+b.sMaterials-item--second.bg-wrap
 			block
 			+e.img-wrap.picture-bg

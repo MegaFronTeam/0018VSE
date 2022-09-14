@@ -1,0 +1,41 @@
+mixin sPersonality(data)
+	// start sPersonality
+	+b.SECTION.sPersonality.section#sPersonality&attributes(attributes)
+		+e.avatar-row.row
+			.col-lg-auto
+				+e.avatar
+					+img('img/main-avatar.jpg')
+			.col-lg-auto
+				+e.desc
+					h1 #[span Энгельгардт ] Александр Николаевич
+					.h4 Писатель, поэт, литературовед, публицист, видный деятель монархического движения.
+					p Годы жизни: 21&nbsp;июля (2&nbsp;августа) 1832&ndash;21 января (2&nbsp;февраля) 1893 (60&nbsp;лет)
+					+e.born Родился в&nbsp;Климово, Бельский уезд, Смоленская губерния, Российская империя
+		+e.inner-row.row
+			+e.inner-col--shown.col-auto
+				+e.link(href="#") Дальний Восток 
+			+e.inner-col--shown.col-auto
+				+e.link(href="#") XIX в. (первая половина) 
+			+e.inner-col--shown.col-auto
+				+e.link(href="#") XVIII в.
+			+e.inner-col--shown.col-auto
+				+e.link(href="#") Пограничье
+			+e.inner-col--shown.col-auto
+				+e.link(href="#") Образы территории
+			+e.inner-col--shown.col-auto
+				+e.link(href="#") Управление
+			+e.inner-col--js.col-auto
+				+e.link--js: +icon('more-horizontal')
+				+e.show-more
+					+e.inner-row.row
+						.col-auto
+							+e.link(href="#") Управление
+						.col-auto
+							+e.link(href="#") Освоение
+						.col-auto
+							+e.link(href="#") Люди
+						.col-auto
+							+e.link(href="#") Пограничье
+						.col-auto
+							+e.link(href="#") Образы территории
+	// end sPersonality
