@@ -5,7 +5,7 @@
 	border-bottom: 1px solid $primary;
 	&__text-wrap{
 		display: flex;
-		// justify-content: center;
+		justify-content: center;
 		align-items: center;
 		flex-direction: column;
 		padding: rem(24) rem(48);
@@ -70,6 +70,48 @@
 		&__slide {
 			&--video {
 				cursor: pointer;
+			}
+		}
+		&__control-wrap {
+			position: absolute;
+			bottom: rem(24);
+			left: 2.6%;
+			width: 93.6%;
+			.swiper-scrollbar {
+				width: calc(100% - rem(79));
+				left: rem(39.5);
+				bottom: unset;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			.swiper-button-hand {
+				--swiperArrowPosition: 0;
+				--swiperColorDef: #fff;
+			}
+		}
+		&__img-wrap {
+			background-color: #E9E9E9;
+			height: 100%;
+			@include block(640, 407);
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	.section-title-simple {
+		margin-bottom: 0;
+		.headerBlock {
+			&__title {
+				margin-bottom: rem(8);
+			}
+			&__text {
+				margin-bottom: rem(8);
+			}
+			&__date {
+				font-size: 12px;
+
 			}
 		}
 	}

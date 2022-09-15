@@ -16,8 +16,8 @@ include ../blocks/footer/_footer.pug
 include ../blocks/sSpecialProjects/_sSpecialProjects.pug
 
 block variables
-	- let  mainPage= 'main-page' 
-	- let  bg= '2-1-about.jpg'
+	- let  mainPage= 'materials-page' 
+	- let  bg= '5-1-special-projects.jpg'
 
 block title
 	- let  title= '5-1 Спецпроекты'
@@ -28,7 +28,7 @@ block pagecontent
 	header.header
 		+topLine
 		+top-nav()
-	+main-page-head('page-head-bg-4.jpg', 'Спецпроекты', true).main-page-head--filter
+	+main-page-head('page-head-bg-4.jpg', 'Спецпроекты', '', true).main-page-head--filter
 	.main-block.container
 		+sSpecialProjects
 	+footer()

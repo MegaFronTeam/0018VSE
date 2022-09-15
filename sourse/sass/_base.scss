@@ -601,3 +601,25 @@ iframe {
 		}
 	}
 }
+
+.materials-page {
+	--sMB: #{rem(94)};
+	.main-page-head {
+		min-height: rem(425);
+		h1 {
+			margin-bottom: rem(10);
+		}
+		&__filter {
+			margin-bottom: rem(9);
+		}
+	}
+}
+
+.album-page {
+	.main-page-head {
+		min-height: rem(405);
+		h1 {
+			margin-bottom: rem(8);
+		}
+	}
+}

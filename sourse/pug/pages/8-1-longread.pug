@@ -1,0 +1,47 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sRegions/_sRegions.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sSimilar/_sSimilar.pug
+
+block variables
+	- let  mainPage= 'longread-page' 
+	- let  bg= '8-1-longread.jpg'
+
+block title
+	- let  title= '8-1 Лонгрид '
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	header.header
+		+topLine
+		+top-nav()
+	+breadcrumb('Главная', 'Материалы', 'Наталия Киприянова Социокультурный облик российского купечества (по материалам Уложенной комиссии 1767 г.)')
+	+headerBlock(true)
+	+tags('Кавказ', 'XIX в. (первая половина)', 'Люди', 'Пограничье', 'Образы территории', 'Управление', 'Управление', 'Визуальное').--longreed
+	.main-block.main-block--simple
+		+sContent
+		+sSimilar
+			+sMaterialsItem('sMaterials-img-7.jpg', 'Польское кино: визитные карточки', 'Лекции Дениса Вирена о&nbsp;ключевых эпохах и&nbsp;явлениях в&nbsp;истории кинематографа Польши, а&nbsp;также идеальный польский телевизор, путеводитель по&nbsp;Польше 1930-х на&nbsp;примере фильма &laquo;Ва-банк&raquo; и&nbsp;топ главных польских фильмов по&nbsp;мнению Дэвида Линча и&nbsp;Мартина Скорсезе', '04 сентября 2022', '', 'Европейский север', 'XVIII в.', 'XIX в. (первая половина)', 'Люди', 'Люди')
+				+sMaterialsTootlip('Лонгрид', 'grid')
+			+sMaterialsItem('sMaterials-img-8.jpg', 'Что мы знаем об этрусках', 'История загадочной цивилизации, которая была главным конкурентом древних римлян в&nbsp;Италии, а&nbsp;потом исчезла', '03 сентября 2022', '','Восточная Сибирь', 'Западная Сибирь', 'XX в. (до 1917 г.)', 'Освоение', 'Освоение')
+				+sMaterialsTootlip('Лонгрид', 'grid')
+			+sMaterialsItem('sMaterials-img-9.jpg', 'Польское кино: визитные карточки', 'Лекции Дениса Вирена о&nbsp;ключевых эпохах и&nbsp;явлениях в&nbsp;истории кинематографа Польши, а&nbsp;также идеальный польский телевизор, путеводитель по&nbsp;Польше 1930-х на&nbsp;примере фильма &laquo;Ва-банк&raquo; и&nbsp;топ главных польских фильмов по&nbsp;мнению Дэвида Линча и&nbsp;Мартина Скорсезе', '04 сентября 2022', '', 'Европейский север', 'Управление', 'Управление', 'Визуальное', 'Визуальное')
+				+sMaterialsTootlip('Лонгрид', 'grid')
+	+footer()
+      
+
+
+

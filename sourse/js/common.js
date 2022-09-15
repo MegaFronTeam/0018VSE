@@ -357,7 +357,6 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		freeMode: true,
 		watchOverflow: true,
-		
 	});
 	
 	let sliderWraps = document.querySelectorAll(".headerBlock");
@@ -372,7 +371,14 @@ function eventHandler() {
 			fadeEffect: {
 				crossFade: true
 			},
-			
+			navigation: {
+				nextEl: sliderWrap.querySelector('.swiper-button-next'),
+				prevEl: sliderWrap.querySelector('.swiper-button-prev'),
+			},
+			scrollbar: {
+				el: sliderWrap.querySelector(".swiper-scrollbar"),
+				draggable: true,
+			},
 		});
 		
 		const swiperText = new Swiper(sliderWrap.querySelector('.slider--text-js'), { 
@@ -447,38 +453,18 @@ function eventHandler() {
 
 	AOS.init();
 
-	let sMaterialsItems = document.querySelectorAll('.sMaterials-item');
-	if (sMaterialsItems) {
-		for (const sMaterialsItem of sMaterialsItems) {
-			let links = sMaterialsItem.querySelectorAll('.sMaterials-item__inner-col--shown');
+	let tagsItems = document.querySelectorAll('.tags');
+	if (tagsItems) {
+		for (const tagsItem of tagsItems) {
+			let links = tagsItem.querySelectorAll('.tags__inner-col--shown');
 			if (links.length > 4) {
-				let showMore = sMaterialsItem.querySelector('.sMaterials-item__inner-col--js');
+				let showMore = tagsItem.querySelector('.tags__inner-col--js');
 				showMore.classList.add('active');
 			};
 		}
-		let sMaterialsLinks = document.querySelectorAll('.sMaterials-item__link--js');
-		for (const sMaterialsLink of sMaterialsLinks) {
-			sMaterialsLink.addEventListener('click', function() {
-				if (window.innerWidth <= 768) {
-					$(this.nextElementSibling).slideToggle();
-					$(this).hide();
-				}
-			});
-		}
-	};
-
-	let sPersonalityItems = document.querySelectorAll('.sPersonality');
-	if (sPersonalityItems) {
-		for (const sPersonalityItem of sPersonalityItems) {
-			let links = sPersonalityItem.querySelectorAll('.sPersonality__inner-col--shown');
-			if (links.length > 4) {
-				let showMore = sPersonality.querySelector('.sPersonality__inner-col--js');
-				showMore.classList.add('active');
-			};
-		}
-		let sPersonalityLinks = document.querySelectorAll('.sPersonality__link--js');
-		for (const sPersonalityLink of sPersonalityLinks) {
-			sPersonalityLink.addEventListener('click', function() {
+		let tagsLinks = document.querySelectorAll('.tags__link--js');
+		for (const tagsLink of tagsLinks) {
+			tagsLink.addEventListener('click', function() {
 				if (window.innerWidth <= 768) {
 					$(this.nextElementSibling).slideToggle();
 					$(this).hide();

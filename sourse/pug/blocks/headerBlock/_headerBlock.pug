@@ -1,4 +1,4 @@
-mixin headerBlock()
+mixin headerBlock(simpleSlider=false)
 	// start headerBlock
 	+b.headerBlock&attributes(attributes)
 		.container.p-0
@@ -8,19 +8,29 @@ mixin headerBlock()
 						.swiper-wrapper
 							- for (var x = 0; x < 3; x++)
 								+e.slide.bg-wrap.swiper-slide
-									+img("img/slide.jpg",'bg')
-									
+									+e.img-wrap
+										+img("img/slide.jpg",'bg')
+						if simpleSlider
+							+e.control-wrap
+								+arrow
+								.swiper-scrollbar
 				+e.text-wrap.bg-danger.col-lg-6
-					+e.arrow-wrap
-						+arrow
-					+b.slider--text-js.swiper
-						.swiper-wrapper
-							- for (var x = 0; x < 3; x++)
-								+e.slide.swiper-slide
-									.section-title--js2
-										+e.title Наталия Киприянова
-										+e.text.mono Наталия Киприянова Социокультурный облик российского купечества  (по материалам Уложенной комиссии 1767 г.)
-						.swiper-scrollbar
+					if simpleSlider
+						.section-title-simple
+							+e.title Наталия Киприянова
+							+e.text.h2 Наталия Киприянова Социокультурный облик российского купечества  (по материалам Уложенной комиссии 1767 г.)
+							+e.date 03 сентября 2022
+					else
+						+e.arrow-wrap
+							+arrow
+						+b.slider--text-js.swiper
+							.swiper-wrapper
+								- for (var x = 0; x < 3; x++)
+									+e.slide.swiper-slide
+										.section-title--js2
+											+e.title Наталия Киприянова
+											+e.text.mono Наталия Киприянова Социокультурный облик российского купечества  (по материалам Уложенной комиссии 1767 г.)
+							.swiper-scrollbar
 	// end headerBlock
 mixin headerBlock2()
 	// start headerBlock
@@ -46,7 +56,8 @@ mixin headerBlock2()
 						.swiper-wrapper
 							- for (var x = 0; x < 4; x++)
 								+e.slide--video.bg-wrap.swiper-slide(data-src='https://www.youtube.com/embed/L_LUpnjgPso' data-fancybox=`video-${x}`)
-									+img("img/slide.jpg",'bg')
+									+e.img-wrap
+										+img("img/slide.jpg",'bg')
 									+e.video-button
 										+img('img/svg/play.svg')
 	// end headerBlock

@@ -16,7 +16,7 @@
 		padding-left: rem(63);
 		&:not(:last-child) {
 			@include media-breakpoint-up(sm) {
-				margin-bottom: rem(56);
+				margin-bottom: rem(54);
 			}
 			@include media-breakpoint-down(sm) {
 				padding-bottom: rem(16);

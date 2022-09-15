@@ -16,8 +16,8 @@ include ../blocks/footer/_footer.pug
 include ../blocks/sMaterials/_sMaterials.pug
 
 block variables
-	- let  mainPage= 'main-page' 
-	- let  bg= '2-1-about.jpg'
+	- let  mainPage= 'materials-page' 
+	- let  bg= '3-2-materials.jpg'
 
 block title
 	- let  title= '3-2 Материалы'
@@ -28,7 +28,7 @@ block pagecontent
 	header.header
 		+topLine
 		+top-nav()
-	+main-page-head('page-head-bg-2.jpg', 'Материалы', true).main-page-head--filter
+	+main-page-head('page-head-bg-2.jpg', 'Материалы', '', true).main-page-head--filter
 	.main-block.container
 		+sMaterialsGrid
 	+footer()

@@ -1,0 +1,28 @@
+// start .sSimilar
+.sSimilar {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(23)};
+	// --sTPB: #{rem()};
+	&__row{
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(32)};
+
+	}
+	.section-title {
+		border-bottom: 1px solid $primary;
+		padding-bottom: rem(16);
+		margin-bottom: rem(24);
+		h4 {
+			font-weight: 400;
+			margin-bottom: 0;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSimilar

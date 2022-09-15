@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>8-2 Лонгрид </title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body class="longread-page" data-bg="8-1-longread.jpg">
+		<div class="main-wrapper">
+			<header class="header">
+				<!-- start topLine-->
+				<div class="topLine" id="topLine">
+					<div class="container">
+						<div class="topLine__row row">
+							<div class="col d-none d-lg-block"><img src="img/logo-1.svg" alt="" loading="lazy"/>
+							</div>
+							<div class="topLine__col col-auto"><img src="img/logo-center.svg" alt="" loading="lazy"/>
+								<div class="topLine__text">Регионы России  <span>в&nbsp;исторической перспективе</span>
+								</div>
+							</div>
+							<div class="col text-end d-none d-lg-block"><img src="img/logo-2.svg" alt="" loading="lazy"/>
+							</div>
+							<div class="col-auto d-lg-none ms-auto">
+								<div class="search-toggle">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end topLine-->
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="menu-mobile menu-mobile--js">
+							<div class="menu-mobile__inner">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+								</div>
+								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Главная</a></li>
+									<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">
+											 регионы
+											<svg class="icon icon-chevron-down ">
+												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+											</svg></a>
+										<ul class="sub-menu">
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Европейский север</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Северо-Запад</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Запад</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Центр</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Поволжье</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Юг</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кавказ</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Урал</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Азиатский север</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Западная Сибирь</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Восточная Сибирь</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Дальний Восток</a></li>
+										</ul>
+									</li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О портале</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Материалы</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Персоналии</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Спецпроекты</a></li>
+								</ul>
+								<div class="top-nav__logos d-lg-none"><img src="img/logo-1-dark.svg" alt="" loading="lazy"/><img src="img/logo-2-dark.svg" alt="" loading="lazy"/>
+								</div>
+							</div>
+						</div>
+						<div class="d-none d-lg-block">
+							<div class="search-toggle">
+								<svg class="icon icon-search ">
+									<use xlink:href="img/svg/sprite.svg#search"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+				<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+					<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+							<meta itemprop="position" content="1"/></a></li>
+					<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Материалы</span>
+							<meta itemprop="position" content="2"/></a></li>
+					<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Наталия Киприянова Социокультурный облик российского купечества (по материалам Уложенной комиссии 1767 г.)</span>
+							<meta itemprop="position" content="3"/></a></li>
+				</ol>
+			</nav>
+			<!-- start headerBlock-->
+			<div class="headerBlock">
+				<div class="container p-0">
+					<div class="row g-0">
+						<div class="col-lg-6">
+							<div class="slider slider--fade-js swiper">
+								<div class="swiper-wrapper">
+									<div class="slider__slide bg-wrap swiper-slide">
+										<div class="slider__img-wrap"><img class="object-fit-js" src="img/slide.jpg" alt="" loading="lazy"/>
+										</div>
+									</div>
+									<div class="slider__slide bg-wrap swiper-slide">
+										<div class="slider__img-wrap"><img class="object-fit-js" src="img/slide.jpg" alt="" loading="lazy"/>
+										</div>
+									</div>
+									<div class="slider__slide bg-wrap swiper-slide">
+										<div class="slider__img-wrap"><img class="object-fit-js" src="img/slide.jpg" alt="" loading="lazy"/>
+										</div>
+									</div>
+								</div>
+								<div class="slider__control-wrap">
+									<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+									<div class="swiper-scrollbar"></div>
+								</div>
+							</div>
+						</div>
+						<div class="headerBlock__text-wrap bg-danger col-lg-6">
+							<div class="section-title-simple">
+								<div class="headerBlock__title">Наталия Киприянова
+								</div>
+								<div class="headerBlock__text h2">Наталия Киприянова Социокультурный облик российского купечества  (по материалам Уложенной комиссии 1767 г.)
+								</div>
+								<div class="headerBlock__date">03 сентября 2022
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end headerBlock-->
+			<div class="tags tags--longreed">
+				<div class="tags__inner-row row">
+					<div class="tags__inner-col tags__inner-col--shown col-auto">
+						<a class="tags__link" href="#">Кавказ
+						</a>
+					</div>
+					<div class="tags__inner-col tags__inner-col--shown col-auto">
+						<a class="tags__link" href="#">XIX в. (первая половина)
+						</a>
+					</div>
+					<div class="tags__inner-col tags__inner-col--shown col-auto">
+						<a class="tags__link" href="#">Люди
+						</a>
+					</div>
+					<div class="tags__inner-col tags__inner-col--shown col-auto">
+						<a class="tags__link" href="#">Пограничье
+						</a>
+					</div>
+					<div class="tags__inner-col tags__inner-col--shown col-auto">
+						<a class="tags__link" href="#">Образы территории
+						</a>
+					</div>
+					<div class="tags__inner-col tags__inner-col--shown col-auto">
+						<a class="tags__link" href="#">Управление
+						</a>
+					</div>
+					<div class="tags__inner-col tags__inner-col--shown col-auto">
+						<a class="tags__link" href="#">Управление
+						</a>
+					</div>
+					<div class="tags__inner-col tags__inner-col--shown col-auto">
+						<a class="tags__link" href="#">Визуальное
+						</a>
+					</div>
+					<div class="tags__inner-col tags__inner-col--js col-auto">
+						<div class="tags__link tags__link--js">
+							<svg class="icon icon-more-horizontal ">
+								<use xlink:href="img/svg/sprite.svg#more-horizontal"></use>
+							</svg>
+						</div>
+						<div class="tags__show-more">
+							<div class="tags__inner-row row">
+								<div class="col-auto">
+									<a class="tags__link" href="#">Управление
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="tags__link" href="#">Освоение
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="tags__link" href="#">Люди
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="tags__link" href="#">Пограничье
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="tags__link" href="#">Образы территории
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-block main-block--simple">
+				<!-- start sContent-->
+				<section class="sContent section" id="sContent">
+					<div class="section-title">
+						<h3>Социокультурный облик российского купечества</h3>
+						<p>Отрывок из&nbsp;книги Наталии Киприяновой &laquo;Социокультурный облик российского купечества (по&nbsp;материалам Уложенной комиссии 1767&nbsp;г.)&raquo; (Владимир.: Изд-во &laquo;Нива&raquo;, 2011). Книга посвящена преставлениям купечества о&nbsp;собственном социальном статусе, основах предпринимательской деятельности, государственной власти и&nbsp;местного управления. Колоссальность пространства, которое занимала Россия в&nbsp;середине XVIII&nbsp;в., предопределила своеобразие природных и&nbsp;экономических условий развития ее&nbsp;регионов. Часть районов была включена в&nbsp;состав Российской империи относительно недавно, в&nbsp;XVII&nbsp;&mdash; первой половине XVIII&nbsp;вв., сохранив особенности своего исторического прошлого.</p>
+						<p>«Региональные особенности требований купеческого сословия»(Глава 2, параграф&nbsp;2, страницы 49-58)</p>
+					</div>
+					<div class="mediaContent mb-lg-0"> 
+						<div class="mediaContent__video-wrap"><iframe src="https://www.youtube.com/embed/L_LUpnjgPso" title="Fireplace 10 hours full HD" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+					<div class="soc">
+						<a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-tg ">
+								<use xlink:href="img/svg/sprite.svg#tg"></use>
+							</svg>
+						</a>
+						<a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-vk ">
+								<use xlink:href="img/svg/sprite.svg#vk"></use>
+							</svg>
+						</a>
+					</div>
+				</section>
+				<!-- end sContent-->
+				<!-- start sSimilar-->
+				<div class="sSimilar section" id="sSimilar">
+					<div class="section-title">
+						<h4 class="mono">Похожие материалы</h4>
+					</div>
+					<div class="sSimilar__row row">
+						<div class="sSimilar__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
+							<div class="sMaterials-item">
+								<div class="sMaterials-item__tooltip-wrap">
+									<div class="sMaterials-item__tooltip-hover">Видео
+									</div>
+									<svg class="icon icon-video ">
+										<use xlink:href="img/svg/sprite.svg#video"></use>
+									</svg>
+								</div>
+								<div class="sMaterials-item__img-wrap"><img src="img/sMaterials-img-10.jpg" alt="image"/>
+								</div>
+								<div class="sMaterials-item__content"> 
+									<div class="h4">Польское кино: визитные карточки</div>
+									<a class="sMaterials-item__text" href="#">Лекции Дениса Вирена о&nbsp;ключевых эпохах и&nbsp;явлениях в&nbsp;истории кинематографа Польши, а&nbsp;также идеальный польский телевизор, путеводитель по&nbsp;Польше 1930-х на&nbsp;примере фильма &laquo;Ва-банк&raquo; и&nbsp;топ главных польских фильмов по&nbsp;мнению Дэвида Линча и&nbsp;Мартина Скорсезе
+									</a>
+									<div class="sMaterials-item__date">04 сентября 2022
+									</div>
+									<div class="tags">
+										<div class="tags__inner-row row">
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">Европейский север
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">XVIII в.
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">Управление
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">Визуальное
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">Визуальное
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--js col-auto">
+												<div class="tags__link tags__link--js">
+													<svg class="icon icon-more-horizontal ">
+														<use xlink:href="img/svg/sprite.svg#more-horizontal"></use>
+													</svg>
+												</div>
+												<div class="tags__show-more">
+													<div class="tags__inner-row row">
+														<div class="col-auto">
+															<a class="tags__link" href="#">Управление
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="tags__link" href="#">Освоение
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="tags__link" href="#">Люди
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="tags__link" href="#">Пограничье
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="tags__link" href="#">Образы территории
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sSimilar__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
+							<div class="sMaterials-item">
+								<div class="sMaterials-item__tooltip-wrap">
+									<div class="sMaterials-item__tooltip-hover">Видео
+									</div>
+									<svg class="icon icon-video ">
+										<use xlink:href="img/svg/sprite.svg#video"></use>
+									</svg>
+								</div>
+								<div class="sMaterials-item__img-wrap"><img src="img/sMaterials-img-11.jpg" alt="image"/>
+								</div>
+								<div class="sMaterials-item__content"> 
+									<div class="h4">Польское кино: визитные карточки</div>
+									<a class="sMaterials-item__text" href="#">Лекции Дениса Вирена о&nbsp;ключевых эпохах и&nbsp;явлениях в&nbsp;истории кинематографа Польши, а&nbsp;также идеальный польский телевизор, путеводитель по&nbsp;Польше 1930-х на&nbsp;примере фильма &laquo;Ва-банк&raquo; и&nbsp;топ главных польских фильмов по&nbsp;мнению Дэвида Линча и&nbsp;Мартина Скорсезе
+									</a>
+									<div class="sMaterials-item__date">04 сентября 2022
+									</div>
+									<div class="tags">
+										<div class="tags__inner-row row">
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">Азиатский север
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">Урал
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">XX в. (1917-1991 гг.)
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">Деньги
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">Деньги
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--js col-auto">
+												<div class="tags__link tags__link--js">
+													<svg class="icon icon-more-horizontal ">
+														<use xlink:href="img/svg/sprite.svg#more-horizontal"></use>
+													</svg>
+												</div>
+												<div class="tags__show-more">
+													<div class="tags__inner-row row">
+														<div class="col-auto">
+															<a class="tags__link" href="#">Управление
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="tags__link" href="#">Освоение
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="tags__link" href="#">Люди
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="tags__link" href="#">Пограничье
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="tags__link" href="#">Образы территории
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sSimilar__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
+							<div class="sMaterials-item">
+								<div class="sMaterials-item__tooltip-wrap">
+									<div class="sMaterials-item__tooltip-hover">Видео
+									</div>
+									<svg class="icon icon-video ">
+										<use xlink:href="img/svg/sprite.svg#video"></use>
+									</svg>
+								</div>
+								<div class="sMaterials-item__img-wrap"><img src="img/sMaterials-img-12.jpg" alt="image"/>
+								</div>
+								<div class="sMaterials-item__content"> 
+									<div class="h4">Что мы знаем об этрусках</div>
+									<a class="sMaterials-item__text" href="#">История загадочной цивилизации, которая была главным конкурентом древних римлян в&nbsp;Италии, а&nbsp;потом исчезла
+									</a>
+									<div class="sMaterials-item__date">03 сентября 2022
+									</div>
+									<div class="tags">
+										<div class="tags__inner-row row">
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">Восточная Сибирь
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">Западная Сибирь
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">XX в. (до 1917 г.)
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--shown col-auto">
+												<a class="tags__link" href="#">XX в. (1991 г. и позднее)
+												</a>
+											</div>
+											<div class="tags__inner-col tags__inner-col--js col-auto">
+												<div class="tags__link tags__link--js">
+													<svg class="icon icon-more-horizontal ">
+														<use xlink:href="img/svg/sprite.svg#more-horizontal"></use>
+													</svg>
+												</div>
+												<div class="tags__show-more">
+													<div class="tags__inner-row row">
+														<div class="col-auto">
+															<a class="tags__link" href="#">Управление
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="tags__link" href="#">Освоение
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="tags__link" href="#">Люди
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="tags__link" href="#">Пограничье
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="tags__link" href="#">Образы территории
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end sSimilar-->
+			</div>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__row row">
+						<div class="col-sm-6 col-lg">
+							<a class="footer__logo" href="/"><img src="img/logo-center.svg" alt="" loading="lazy"/>
+								<p><span>Регионы России </span> в&nbsp;исторической перспективе</p>
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg">
+							<div class="footer__title">Контакты
+							</div>
+							<div class="footer__info">
+								<svg class="icon icon-map-pin ">
+									<use xlink:href="img/svg/sprite.svg#map-pin"></use>
+								</svg>Россия, 101000, г. Москва, ул. Мясницкая, д. 20
+							</div>
+							<a class="footer__info" href="mailto:regionalhist@hse.ru">
+								<svg class="icon icon-mail ">
+									<use xlink:href="img/svg/sprite.svg#mail"></use>
+								</svg>regionalhist@hse.ru
+							</a>
+							<a class="footer__info" href="tel:+74957713232">
+								<svg class="icon icon-phone ">
+									<use xlink:href="img/svg/sprite.svg#phone"></use>
+								</svg>+7 (495) 771-32-32
+							</a>
+							<a class="footer__info" href="tel:+74956287931">
+								<svg class="icon icon-printer ">
+									<use xlink:href="img/svg/sprite.svg#printer"></use>
+								</svg>+7 (495) 628-79-31
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg">
+							<div class="footer__title">Другое
+							</div>
+							<a class="footer__info footer__info--hover" href="#">О лаборатории
+							</a>
+							<a class="footer__info footer__info--hover" href="#">Фонд Михаила Прохорова
+							</a>
+							<a class="footer__info footer__info--hover" href="#">НИУ Высшая школа экономики
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-auto">
+							<div class="footer__title">Подпишитесь на наши новости
+							</div>
+							<div class="form-wrap">
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<button class="form-wrap__btn btn btn-danger">Подписаться
+								</button>
+							</div>
+							<div class="footer__policy">Нажимая «Подписаться» вы соглашаетесь с <a href="#">обработкой персональных данных </a>
+							</div>
+							<div class="soc">
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-tg ">
+										<use xlink:href="img/svg/sprite.svg#tg"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-youtube ">
+										<use xlink:href="img/svg/sprite.svg#youtube"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__info-row row">
+						<div class="col-sm-6 col-lg">
+							<div class="footer__name">© <span></span> Высшая школа экономики
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg">
+							<a class="footer__link" href="#">Условия пользованя материалов
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg">
+							<a class="footer__link" href="#">Политика конфиденциальности
+							</a>
+						</div>
+						<div class="col-sm-6 col-lg-auto">
+							<a class="footer__link" href="#"> <img src="img/svg/designLogo.svg" alt="" loading="lazy"/>Сделано в Coalla Agency
+							</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+							</div>
+							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn" type="submit"> 
+						</button>
+						<div class="form-wrap__policy">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/masonry-layout/masonry.pkgd.min.js"> </script>
+		<script src="libs/aos/aos.js"> </script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

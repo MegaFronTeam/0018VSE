@@ -38,13 +38,15 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin main-page-head(img, title, filter)
+mixin main-page-head(img, title, date="", filter)
 	+b.main-page-head.bg-wrap&attributes(attributes)
 		+e.img-wrap.picture-bg
 			+img(`img/${img}`, 'bg')
 		.container.p-0
 			if title
 				h1!= title
+			if date
+				+e.date!= date
 			if filter
 				+e.filter
 					+e.filter-row.row
@@ -57,13 +59,13 @@ mixin main-page-head(img, title, filter)
 						.col-md-auto
 							+input('Все', 'select', 'Регионы')
 
-mixin page-head(t,...items)
-	+b.page-head
-		- let l = items.length
-		.container
-			+breadcrumb('Главная',...items)
+//- mixin page-head(t,...items)
+//- 	+b.page-head
+//- 		- let l = items.length
+//- 		.container
+//- 			+breadcrumb('Главная',...items)
 
-			h1= t
+//- 			h1= t
 
 mixin success()
 	+b.success
@@ -81,59 +83,46 @@ mixin sMaterialsItem(img, title, text, date, name, ...items)
 		+b.sMaterials-item
 			block
 			+e.img-wrap
-				img(src=`img/${img}`)
+				img(src=`img/${img}` alt="image")
 			+e.content 
 				if name
 					+e.name!= name
 				.h4!= title 
 				+e.text(href="#")!= text
 				+e.date!= date
-				+e.inner-row.row
-					each item in items
-						+e.inner-col--shown.col-auto
-							+e.link(href="#")!= item
-					+e.inner-col--js.col-auto
-						+e.link--js: +icon('more-horizontal')
-						+e.show-more
-							+e.inner-row.row
-								.col-auto
-									+e.link(href="#") Управление
-								.col-auto
-									+e.link(href="#") Освоение
-								.col-auto
-									+e.link(href="#") Люди
-								.col-auto
-									+e.link(href="#") Пограничье
-								.col-auto
-									+e.link(href="#") Образы территории
+				+tags(...items)
 
 mixin sMaterialsItemSecond(img, title, text, date, name, ...items)
 	+e.col.col-12.col-md-6(data-aos="fade-up")
 		+b.sMaterials-item--second.bg-wrap
 			block
 			+e.img-wrap.picture-bg
-				img(src=`img/${img}`)
+				img(src=`img/${img}` alt="image")
 			+e.content 
 				if name
 					+e.name!= name
-				.h5!= title 
+				.h5.mono!= title 
 				+e.text(href="#")!= text
 				+e.date!= date
-				+e.inner-row.row
-					each item in items
-						+e.inner-col--shown.col-auto
-							+e.link(href="#")!= item
-					+e.inner-col--js.col-auto
-						+e.link--js: +icon('more-horizontal')
-						+e.show-more
-							+e.inner-row.row
-								.col-auto
-									+e.link(href="#") Управление
-								.col-auto
-									+e.link(href="#") Освоение
-								.col-auto
-									+e.link(href="#") Люди
-								.col-auto
-									+e.link(href="#") Пограничье
-								.col-auto
-									+e.link(href="#") Образы территории
+				+tags(...items)
+
+mixin tags(...items)
+	+b.tags&attributes(attributes)
+		+e.inner-row.row
+			each item in items
+				+e.inner-col--shown.col-auto
+					+e.link(href="#")!= item
+			+e.inner-col--js.col-auto
+				+e.link--js: +icon('more-horizontal')
+				+e.show-more
+					+e.inner-row.row
+						.col-auto
+							+e.link(href="#") Управление
+						.col-auto
+							+e.link(href="#") Освоение
+						.col-auto
+							+e.link(href="#") Люди
+						.col-auto
+							+e.link(href="#") Пограничье
+						.col-auto
+							+e.link(href="#") Образы территории
