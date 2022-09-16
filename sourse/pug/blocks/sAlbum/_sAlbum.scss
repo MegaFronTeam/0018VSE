@@ -67,12 +67,18 @@
 		}
 	}
 	&__item{
-
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
 	}
 	&__img-wrap {
 		@include block(261, 154);
 		margin-bottom: rem(7);
+		overflow: hidden;
 		img {
+			@include mt;
 			min-height: 100%;
 			min-width: 100%;
 		}

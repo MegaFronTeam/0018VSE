@@ -1,0 +1,13 @@
+mixin s404(data)
+	// start s404
+	+b.SECTION.s404.section#s404&attributes(attributes)
+		.container
+			+e.region
+				+img('img/logo-center.svg')
+				+e.text Регионы России
+					span в исторической перспективе
+			+b.section-title.text-center
+				h1 Ошибка 404
+				p Страница не найдена. Она не существовала или срок публикации истёк.
+				a(href="/").btn.btn-danger На главную
+	// end s404

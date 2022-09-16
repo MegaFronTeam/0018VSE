@@ -13,8 +13,10 @@ mixin topLine()
 				.col.text-end.d-none.d-lg-block
 					+img("img/logo-2.svg")
 				.col-auto.d-lg-none.ms-auto
-					+b.search-toggle
+					+b.search-toggle--js
 						+icon("search")
 				.col-auto.d-lg-none
 					+menu-toggle()
+		.d-block.d-lg-none
+			+search()
 	// end topLine

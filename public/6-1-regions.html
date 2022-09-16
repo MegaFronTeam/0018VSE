@@ -28,7 +28,7 @@
 							<div class="col text-end d-none d-lg-block"><img src="img/logo-2.svg" alt="" loading="lazy"/>
 							</div>
 							<div class="col-auto d-lg-none ms-auto">
-								<div class="search-toggle">
+								<div class="search-toggle search-toggle--js">
 									<svg class="icon icon-search ">
 										<use xlink:href="img/svg/sprite.svg#search"></use>
 									</svg>
@@ -38,6 +38,20 @@
 								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 								</div>
 							</div>
+						</div>
+					</div>
+					<div class="d-block d-lg-none">
+						<div class="search-block search-block--js form-wrap">
+							<form>
+								<input type="text" placeholder="Поиск"/>
+								<button class="search-block__search">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</button>
+							</form>
+							<button class="search-block__cross search-toggle search-toggle--js">
+							</button>
 						</div>
 					</div>
 				</div>
@@ -81,10 +95,24 @@
 							</div>
 						</div>
 						<div class="d-none d-lg-block">
-							<div class="search-toggle">
+							<div class="search-toggle search-toggle--js">
 								<svg class="icon icon-search ">
 									<use xlink:href="img/svg/sprite.svg#search"></use>
 								</svg>
+							</div>
+						</div>
+						<div class="d-none d-lg-block">
+							<div class="search-block search-block--js form-wrap">
+								<form>
+									<input type="text" placeholder="Поиск"/>
+									<button class="search-block__search">
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>
+									</button>
+								</form>
+								<button class="search-block__cross search-toggle search-toggle--js">
+								</button>
 							</div>
 						</div>
 					</div>
@@ -278,8 +306,8 @@
 							<div class="sMaterials__row row">
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Архивный фонд
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Архивный фонд
 											</div>
 											<svg class="icon icon-folder ">
 												<use xlink:href="img/svg/sprite.svg#folder"></use>
@@ -353,8 +381,8 @@
 								</div>
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Архивный фонд
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Архивный фонд
 											</div>
 											<svg class="icon icon-folder ">
 												<use xlink:href="img/svg/sprite.svg#folder"></use>
@@ -424,8 +452,8 @@
 								</div>
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Архивный фонд
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Архивный фонд
 											</div>
 											<svg class="icon icon-folder ">
 												<use xlink:href="img/svg/sprite.svg#folder"></use>
@@ -511,8 +539,8 @@
 							<div class="sMaterials__row row">
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Книги и исследования
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Книги и исследования
 											</div>
 											<svg class="icon icon-books ">
 												<use xlink:href="img/svg/sprite.svg#books"></use>
@@ -584,8 +612,8 @@
 								</div>
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Книги и исследования
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Книги и исследования
 											</div>
 											<svg class="icon icon-books ">
 												<use xlink:href="img/svg/sprite.svg#books"></use>
@@ -653,8 +681,8 @@
 								</div>
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Книги и исследования
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Книги и исследования
 											</div>
 											<svg class="icon icon-books ">
 												<use xlink:href="img/svg/sprite.svg#books"></use>
@@ -730,8 +758,8 @@
 							<div class="sMaterials__row row">
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Лонгрид
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Лонгрид
 											</div>
 											<svg class="icon icon-grid ">
 												<use xlink:href="img/svg/sprite.svg#grid"></use>
@@ -805,8 +833,8 @@
 								</div>
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Лонгрид
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Лонгрид
 											</div>
 											<svg class="icon icon-grid ">
 												<use xlink:href="img/svg/sprite.svg#grid"></use>
@@ -880,8 +908,8 @@
 								</div>
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Лонгрид
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Лонгрид
 											</div>
 											<svg class="icon icon-grid ">
 												<use xlink:href="img/svg/sprite.svg#grid"></use>
@@ -963,8 +991,8 @@
 							<div class="sMaterials__row row">
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Видео
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Видео
 											</div>
 											<svg class="icon icon-video ">
 												<use xlink:href="img/svg/sprite.svg#video"></use>
@@ -1038,8 +1066,8 @@
 								</div>
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Видео
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Видео
 											</div>
 											<svg class="icon icon-video ">
 												<use xlink:href="img/svg/sprite.svg#video"></use>
@@ -1113,8 +1141,8 @@
 								</div>
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Видео
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Видео
 											</div>
 											<svg class="icon icon-video ">
 												<use xlink:href="img/svg/sprite.svg#video"></use>
@@ -1192,8 +1220,8 @@
 							<div class="sMaterials__row row">
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Альбом
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Альбом
 											</div>
 											<svg class="icon icon-image ">
 												<use xlink:href="img/svg/sprite.svg#image"></use>
@@ -1267,8 +1295,8 @@
 								</div>
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Альбом
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Альбом
 											</div>
 											<svg class="icon icon-image ">
 												<use xlink:href="img/svg/sprite.svg#image"></use>
@@ -1338,8 +1366,8 @@
 								</div>
 								<div class="sMaterials__col col-12 col-md-6 col-lg-4" data-aos="fade-up">
 									<div class="sMaterials-item">
-										<div class="sMaterials-item__tooltip-wrap">
-											<div class="sMaterials-item__tooltip-hover">Альбом
+										<div class="tooltip-wrap">
+											<div class="tooltip-wrap__hover">Альбом
 											</div>
 											<svg class="icon icon-image ">
 												<use xlink:href="img/svg/sprite.svg#image"></use>

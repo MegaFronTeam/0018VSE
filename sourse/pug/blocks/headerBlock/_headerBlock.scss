@@ -87,6 +87,8 @@
 			.swiper-button-hand {
 				--swiperArrowPosition: 0;
 				--swiperColorDef: #fff;
+				background-color: transparent;
+				box-shadow: none;
 			}
 		}
 		&__img-wrap {
@@ -108,6 +110,12 @@
 			}
 			&__text {
 				margin-bottom: rem(8);
+			}
+			&__subtext {
+				max-width: rem(444);
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: rem(14);
 			}
 			&__date {
 				font-size: 12px;

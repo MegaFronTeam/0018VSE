@@ -1,4 +1,4 @@
-mixin headerBlock(simpleSlider=false)
+mixin headerBlock(simpleSlider=false, imgCenter=false, name, title, date, text)
 	// start headerBlock
 	+b.headerBlock&attributes(attributes)
 		.container.p-0
@@ -8,8 +8,13 @@ mixin headerBlock(simpleSlider=false)
 						.swiper-wrapper
 							- for (var x = 0; x < 3; x++)
 								+e.slide.bg-wrap.swiper-slide
-									+e.img-wrap
-										+img("img/slide.jpg",'bg')
+									if imgCenter
+										+e.img-wrap(href="#" data-src="img/book-2.png" data-fancybox="gallery")
+											.img-wrap-center
+												+img("img/book-2.png")
+									else
+										+e.img-wrap
+											+img("img/slide.jpg",'bg')
 						if simpleSlider
 							+e.control-wrap
 								+arrow
@@ -17,9 +22,10 @@ mixin headerBlock(simpleSlider=false)
 				+e.text-wrap.bg-danger.col-lg-6
 					if simpleSlider
 						.section-title-simple
-							+e.title Наталия Киприянова
-							+e.text.h2 Наталия Киприянова Социокультурный облик российского купечества  (по материалам Уложенной комиссии 1767 г.)
-							+e.date 03 сентября 2022
+							+e.title!= name
+							+e.text.h2!= title
+							+e.subtext!= text
+							+e.date!= date
 					else
 						+e.arrow-wrap
 							+arrow

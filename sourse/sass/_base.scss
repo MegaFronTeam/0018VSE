@@ -574,6 +574,8 @@ iframe {
 	img {
 		max-width: 100%;
 		max-height: 100%;
+		width: auto !important;
+		position: static !important;
 	}
 }
 
@@ -620,6 +622,28 @@ iframe {
 		min-height: rem(405);
 		h1 {
 			margin-bottom: rem(8);
+		}
+	}
+}
+
+.search-page {
+	.main-block {
+		margin-top: rem(47);
+	}
+}
+
+.books-and-studies-page {
+	.headerBlock {
+		.slider__control-wrap {
+			.swiper-scrollbar {
+				background: rgba($color: #D3D3D3, $alpha: .4);
+				&-drag {
+					background-color: #D3D3D3;
+				}
+			}
+			.swiper-button-hand {
+				--swiperColorDef: #{$body-color};
+			}
 		}
 	}
 }

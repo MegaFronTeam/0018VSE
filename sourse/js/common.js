@@ -472,6 +472,16 @@ function eventHandler() {
 			});
 		}
 	};
+
+	const sSearchSwiper = new Swiper('.sSearch__tabs-slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 22,
+	});
+
+	$(".search-toggle--js").on("click", function(e){
+		e.preventDefault;
+		$(".search-block--js").toggleClass("active");
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -9,3 +9,7 @@
 1. <https://megafronteam.github.io/0018VSE/public/8-1-longread.html>
 1. <https://megafronteam.github.io/0018VSE/public/8-2-longread.html>
 1. <https://megafronteam.github.io/0018VSE/public/9-1-album.html>
+1. <https://megafronteam.github.io/0018VSE/public/10-1-Books-and-studies.html>
+1. <https://megafronteam.github.io/0018VSE/public/11-1-search-results.html>
+1. <https://megafronteam.github.io/0018VSE/public/11-2-search-results.html>
+1. <https://megafronteam.github.io/0018VSE/public/404.html>

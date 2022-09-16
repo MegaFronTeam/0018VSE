@@ -32,11 +32,12 @@ mixin addblock()
 
 
 mixin search()
-	+b.search-block
+	+b.search-block--js.form-wrap
 		form
-			input(type="text" placeholder="Поиск по номеру или названию запчасти")
-			button 
-				+icon("search")
+			input(type="text" placeholder="Поиск")
+			+e.BUTTON.search
+				+icon('search')
+		+e.BUTTON.cross.search-toggle--js
 
 mixin main-page-head(img, title, date="", filter)
 	+b.main-page-head.bg-wrap&attributes(attributes)
@@ -74,8 +75,8 @@ mixin success()
 		p Теперь Вы&nbsp;всегда будете вкурсе всех новостей нашего портала
 
 mixin sMaterialsTootlip(text, icon)
-	+e.tooltip-wrap
-		+e.tooltip-hover!= text
+	+b.tooltip-wrap
+		+e.hover!= text
 		+icon(icon)
 
 mixin sMaterialsItem(img, title, text, date, name, ...items)
