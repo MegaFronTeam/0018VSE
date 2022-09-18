@@ -8,7 +8,7 @@ mixin sAlbum(data)
 		+e.row.row
 			mixin item(img,  text)
 				.col-sm-6.col-md-4(data-aos="fade-up")
-					+e.item(href="#" data-src=`img/${img}` data-fancybox="gallery")
+					+e.item(href="#" data-src=`img/${img}` data-fancybox="gallery-with-caption" data-info="Трудовые будни героев Пушкина, Лермонтова, Гоголя и Грибоедова")
 						+e.img-wrap
 							.img-wrap-center
 								+img(`img/${img}`)
@@ -51,7 +51,7 @@ mixin sAlbum(data)
 			+item('image-lg-4.png')
 			+item('image-lg-5.png')
 		+soc()
-			+item-sos('tg')
-			+item-sos('vk')
+			//- +item-sos('tg')
+			//- +item-sos('vk')
 		+pugin()
 	// end sAlbum

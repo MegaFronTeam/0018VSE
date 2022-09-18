@@ -11,8 +11,8 @@
 		place-items: center;
 		border: 1px solid $primary;
 		border-radius: 2px;
-		width: 32px;
-		height: 32px;
+		width: rem(32);
+		height: rem(32);
 		&:hover{
 		 	box-shadow: 1px 0px 8px 0px #002d6e4a;
 			// opacity: .6 ;

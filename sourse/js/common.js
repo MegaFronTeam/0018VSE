@@ -1,4 +1,5 @@
 "use strict";
+
 const JSCCommon = { 
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -23,6 +24,112 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
+		// Fancybox.bind('[data-fancybox="gallery-with-caption"]', {
+		// 	Image: {
+		// 		zoom: true,
+		// 	},
+		// });
+		Fancybox.bind('[data-fancybox="gallery-with-caption"]', {
+			Toolbar: {
+				display: [
+					{
+						id: "counter",
+						position: "center",
+					},
+					"toggleInfo",
+					"zoom",
+					"slideshow",
+					"fullscreen",
+					"thumbs",
+					"close",
+				],
+			},
+		
+			on: {
+				initLayout: (fancybox) => {
+					// Create elements
+					// ===
+		
+					// Create left column
+					const $leftCol = document.createElement("div");
+					$leftCol.classList.add("fancybox__leftCol");
+		
+					while (fancybox.$container.firstChild) {
+						$leftCol.appendChild(fancybox.$container.firstChild);
+					}
+		
+					// Create right column
+					const $rightCol = document.createElement("div");
+					$rightCol.classList.add("fancybox__rightCol");
+					// $rightCol.createElement('button');
+					// $rightCol.innerHTML =
+					// 	'<p class="mb-2">You can place any content here, such as ads, comments or map</p>';
+		
+					// Create info-box
+					const $info = document.createElement("div");
+					const $button = document.createElement("button");
+					$button.classList.add('closeBtn');
+					$rightCol.appendChild($button);
+					$rightCol.appendChild($info);
+					fancybox.$info = $info;
+		
+					// Add elements to DOM
+					fancybox.$container.appendChild(fancybox.$backdrop);
+		
+					fancybox.$container.appendChild($leftCol);
+					fancybox.$container.appendChild($rightCol);
+		
+					fancybox.$leftCol = $leftCol;
+					fancybox.$rightCol = $rightCol;
+					let closeBtn = document.querySelector('.closeBtn');
+					closeBtn.addEventListener('click', function(e) {
+						e.preventDefault();
+						$('.fancybox__rightCol').removeClass('active');
+					});
+				},
+				"Carousel.ready Carousel.change": (fancybox, carousel, slideIndex) => {
+					// Update info-box
+					// ===
+		
+					// Get index of the current gallery item
+					slideIndex =
+						slideIndex === undefined ? carousel.options.initialPage : slideIndex;
+		
+					// Get link related to current item
+					const $trigger = fancybox.items[slideIndex].$trigger;
+					
+					// Get data from `data-info` attribute
+					const data = $trigger.dataset.info || "";
+					const dataTitle = $trigger.dataset.title || "";
+					const dataName = $trigger.dataset.name || "";
+					
+					// Update info
+					if (dataTitle != "" || dataName != "") {
+						fancybox.$info.innerHTML = 
+							`<div class="fancyBox-title">${dataTitle}</div> 
+							<div class="fancyBox-name">${dataName}</div> 
+							<p>${data}</p>`;
+					} else {
+						fancybox.$info.innerHTML = 
+							`<p>${data}</p>`;
+					}
+				},
+			},
+		});
+		Fancybox.Plugins.Toolbar.defaults.items.toggleInfo = {
+			type: "button",
+			class: "fancybox__button--toggleInfo",
+			label: "Toggle Info",
+			html: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M11.3992 10.8V16.8H12.5992V10.8H11.3992Z" fill="white"/>
+			<path d="M11.9992 5.99995C11.3365 5.99995 10.7992 6.53721 10.7992 7.19995C10.7992 7.86269 11.3365 8.39995 11.9992 8.39995C12.662 8.39995 13.1992 7.86269 13.1992 7.19995C13.1992 6.53721 12.662 5.99995 11.9992 5.99995Z" fill="white"/>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M22.7992 12C22.7992 17.9646 17.9639 22.7999 11.9992 22.7999C6.03454 22.7999 1.19922 17.9646 1.19922 12C1.19922 6.03528 6.03454 1.19995 11.9992 1.19995C17.9639 1.19995 22.7992 6.03528 22.7992 12ZM21.5992 12C21.5992 17.3019 17.3012 21.6 11.9992 21.6C6.69728 21.6 2.39922 17.3019 2.39922 12C2.39922 6.69802 6.69728 2.39995 11.9992 2.39995C17.3012 2.39995 21.5992 6.69802 21.5992 12Z" fill="white"/>
+			</svg>`,
+			click: function (event) {
+				event.preventDefault();
+				$('.fancybox__rightCol').addClass('active');
+			},
+		};
 		document.querySelectorAll(".modal-close-js").forEach(el=>{
 			el.addEventListener("click", ()=>{
 				Fancybox.close();

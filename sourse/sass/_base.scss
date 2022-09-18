@@ -647,3 +647,146 @@ iframe {
 		}
 	}
 }
+
+// a[data-fancybox] img {
+//   cursor: zoom-in;
+// }
+
+.fancybox__container {
+  // --fancybox-bg: #fff;
+  // --fancybox-color: #333;
+  // --fancybox-accent-color: #e879f9;
+
+  // --carousel-button-svg-filter: none;
+
+  display: flex;
+  flex-direction: row;
+	z-index: 3400;
+}
+
+.fancybox__leftCol {
+	width: 100vw;
+  min-height: 1px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+	// @include media-breakpoint-up(lg) {
+  // 	width: 80vw;
+	// }
+}
+
+.fancybox__rightCol {
+	@include mt;
+  // width: 20vw;
+  // max-width: 300px;
+	width: 100%;
+	max-width: rem(248);
+  height: 100%;
+  padding: rem(40) rem(16);
+  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  border-left: 1px solid #edeef0;
+
+  opacity: var(--fancybox-opacity, 1);
+	background-color: #fff;
+	color: $body-color;
+	p {
+		max-width: rem(323);
+		font-size: rem(16);
+		margin-bottom: 0;
+		@include media-breakpoint-down(sm) {
+			font-size: 12px;
+		}
+	}
+	@include media-breakpoint-down(lg) {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 110;
+		width: 100%;
+		max-width: 360px;
+		transform: translateX(100%);
+		&.active {
+			transform: translateX(0);
+		}
+	}
+}
+
+.fancybox__toolbar__items--center {
+	position: static;
+	transform: none;
+	@media (max-width: 640px) {
+		display: block !important;
+	}
+}
+
+.closeBtn {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: 16px;
+	right: 16px;
+	border: none;
+	background-color: transparent;
+	@include media-breakpoint-up(lg) {
+		display: none;
+	}
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 15px;
+		height: 1px;
+		background-color: $body-color;
+		@include a-cent;
+	}
+	&:before {
+		transform: rotate(45deg);
+	}
+	&:after {
+		transform: rotate(-45deg);
+	}
+}
+
+.fancyBox {
+	&-title {
+		font-size: 16px;
+		font-weight: 600;
+		margin-bottom: rem(4);
+	}
+	&-name {
+		font-size: 16px;
+		margin-bottom: rem(16);
+	}
+}
+
+.fancybox__button {
+	&--toggleInfo {
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+		svg {
+			--carousel-button-svg-stroke-width: 1px;
+			fill: currentColor;
+		}
+	}
+}
+
+/* Opening */
+.fancybox__container.is-animated[aria-hidden="false"] .fancybox__rightCol {
+  animation: 0.15s ease backwards fancybox-fadeIn;
+}
+
+/* Closing */
+.fancybox__container.is-animated.is-closing .fancybox__rightCol {
+  animation: 0.15s ease both fancybox-fadeOut;
+}
+
+.fancybox__container.is-animated.is-closing .fancybox__leftCol {
+  overflow: visible;
+}

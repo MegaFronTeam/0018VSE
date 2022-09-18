@@ -9,7 +9,7 @@ mixin headerBlock(simpleSlider=false, imgCenter=false, name, title, date, text)
 							- for (var x = 0; x < 3; x++)
 								+e.slide.bg-wrap.swiper-slide
 									if imgCenter
-										+e.img-wrap(href="#" data-src="img/book-2.png" data-fancybox="gallery")
+										+e.img-wrap(href="#" data-src="img/book-2.png" data-fancybox="gallery-with-caption" data-info="Представленная монография была написана Мерлом Фэйнсодом, профессором Гарвардского университета, известным историком, стоявшим у истоков формирования западной советологии. Она написана на базе «Смоленского архива», который после Второй мировой войны находился в Национальном архиве США в результате его обнаружения американскими военнослужащими в Баварии в 1945 г." data-title="Над пропастью во ржи" data-name="Джером Сэлинджер")
 											.img-wrap-center
 												+img("img/book-2.png")
 									else
