@@ -63,7 +63,7 @@
 
 
 .toggle-menu-mobile {
-	--h: #{em(2.05)};
+	--h: #{em(1.8)};
 	--color: #{#fff};
 	--position: calc(var(--h) * 3);
 	&.on span {
@@ -198,9 +198,17 @@
 .menu-item-has-children{
 	display: flex;
 	@include media-breakpoint-up(lg) {
-		&:hover .sub-menu{
-			opacity: 1;
-			pointer-events: all;
+		&:hover {
+			& > a {
+				color: $danger;
+				svg {
+					transform: rotate(-180deg);
+				}
+			}
+			.sub-menu {
+				opacity: 1;
+				pointer-events: all;
+			}
 		}
 	}
 	@include media-breakpoint-down(lg) {

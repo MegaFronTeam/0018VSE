@@ -13,6 +13,10 @@
 		padding-top: rem(10);
 		padding-bottom: rem(10);
 	}
+	@include media-breakpoint-down(sm) {
+		padding-top: rem(19);
+		padding-bottom: rem(19);
+	}
 	&__row{
 		align-items: center;
 		--bs-gutter-x: #{rem(4.800)};

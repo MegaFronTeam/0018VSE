@@ -9,6 +9,9 @@
 		align-items: center;
 		flex-direction: column;
 		padding: rem(24) rem(48);
+		@include media-breakpoint-down(lg) {
+			border-top: 1px solid $primary;
+		}
 	}
 	&__arrow-wrap{
 		margin-bottom: rem(16);
@@ -22,6 +25,7 @@
 		.swiper-button-hand{
 			position: static;
 			color: #fff;
+			z-index: 10;
 		}
 		&--2 {
 			margin-bottom: rem(35);

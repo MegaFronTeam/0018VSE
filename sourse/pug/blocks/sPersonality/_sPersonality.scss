@@ -130,6 +130,7 @@
 		}
 	}
 	&__content {
+		position: static !important;
 		max-width: rem(808);
 		margin-left: auto;
 		margin-right: auto;

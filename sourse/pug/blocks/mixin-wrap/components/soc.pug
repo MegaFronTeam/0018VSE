@@ -5,8 +5,8 @@ mixin item-sos(icon, a='#')
 		else
 			+icon(icon)
 //- social buttons
-mixin soc()
-	+b.soc
+mixin soc(activeClass="soc--js")
+	+b.soc(class=activeClass)
 		if block
 			block
 		else

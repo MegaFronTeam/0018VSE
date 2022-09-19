@@ -3,6 +3,9 @@
 	color: #fff;
 	padding-top: rem(16);
 	padding-bottom: rem(56);
+	@include media-breakpoint-up(sm) {
+		padding-bottom: rem(84);
+	}
 	@include media-breakpoint-up(lg) {
 		padding-top: rem(41);
 		padding-bottom: 0;
@@ -98,6 +101,9 @@
 			color: #fff;
 			opacity: 0.8;
 		}
+		&.footer__info {
+			max-width: max-content;
+		}
 	}
 	.form-wrap {
 		display: flex;
@@ -106,6 +112,7 @@
 		&__input-wrap {
 			width: rem(217);
 			max-width: 100%;
+			flex-grow: 1;
 		}
 		&__input {
 			border-radius: 0;
@@ -113,15 +120,24 @@
 			padding: rem(8);
 		}
 		&__btn {
-			width: rem(127);
-			max-width: 100%;
+			max-width: 120px;
+			width: 100%;
 			text-transform: uppercase;
 			line-height: 1.71em;
 			--bs-btn-font-size: #{rem(14)};
 			--bs-btn-font-weight: 600;
 			--bs-btn-border-radius: 0;
 			@include media-breakpoint-up(lg) {
-				width: rem(138);
+				max-width: rem(138);
+			}
+			@include media-breakpoint-up(sm) {
+				max-width: rem(127);
+			}
+			&:hover {
+				@include media-breakpoint-down(sm) {
+					--bs-btn-hover-bg: #{$danger};
+					--bs-btn-hover-border-color: #{$danger};
+				}
 			}
 		}
 	}

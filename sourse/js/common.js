@@ -589,6 +589,16 @@ function eventHandler() {
 		e.preventDefault;
 		$(".search-block--js").toggleClass("active");
 	})
+
+	$('.soc--js').hcSticky({
+		mobileFirst: true,
+		responsive: {
+			768: {
+				stickTo: $('.main-block'),
+				top: 80,
+			}
+		},
+  });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -12,22 +12,25 @@
 	.soc {
 		margin-top: rem(16);
 		margin-bottom: 0;
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
+			position: absolute;
 			--bs-gutter-y: #{rem(16)};
 			margin-bottom: 0;
 			margin-top: 0;
-			position: absolute;
-			top: rem(67);
-			left: rem(-47);
 			flex-direction: column;
 			margin-top: calc(var(--bs-gutter-y) * -1);
+			top: rem(67);
+			left: rem(-40px);
+		}
+		@include media-breakpoint-up(lg) {
+			// top: rem(67);
+			left: rem(-140px);
 		}
 		@include media-breakpoint-up(xl) {
-			top: rem(67);
-			left: rem(-76);
+			left: rem(-160);
 		}
 		&__item {
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(md) {
 				margin-top: var(--bs-gutter-y);
 			}
 		}
