@@ -3,25 +3,29 @@
 	--sPT: #{rem(0)};
 	--sPB: #{rem(5)};
 	// --sTPB: #{rem()};
-	position: relative;
 	@include media-breakpoint-up(lg) {
+		position: relative;
 		--sPB: #{rem(44)};
 	}
 	.soc {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			--bs-gutter-y: #{rem(16)};
 			position: absolute;
 			top: rem(120);
-			left: rem(-95);
+			left: rem(10);
 			flex-direction: column;
 			margin-top: calc(var(--bs-gutter-y) * -1);
+		}
+		@include media-breakpoint-up(lg) {
+			top: rem(120);
+			left: rem(-95);
 		}
 		@include media-breakpoint-up(xl) {
 			top: rem(137);
 			left: rem(-128);
 		}
 		&__item {
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(md) {
 				margin-top: var(--bs-gutter-y);
 			}
 		}
@@ -119,7 +123,7 @@
 		margin-bottom: rem(40);
 		width: 100%;
 		@include media-breakpoint-up(lg) {
-			max-width: calc(100% - rem(176));
+			max-width: calc(100% - 76px);
 		}
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(56);
@@ -139,7 +143,7 @@
 		margin-right: auto;
 		width: 100%;
 		@include media-breakpoint-up(lg) {
-			max-width: calc(100% - rem(204));
+			max-width: calc(100% - 100px);
 		}
 		h2 {
 			margin-bottom: rem(16);

@@ -15,8 +15,11 @@
 		// max-width: rem(1008);
 		background-color: #fff;
 		width: 100%;
+		@media (min-width: 1921px) {
+			max-width: calc(1660px);
+		}
 		@include media-breakpoint-up(lg) {
-			max-width: calc(100% - rem(260));
+			max-width: calc(100% - 260px);
 		}
 	}
 	&__img-wrap {
@@ -127,7 +130,7 @@
 			margin-right: auto;
 			width: 100%;
 			@include media-breakpoint-up(lg) {
-				max-width: calc(100% - rem(206));
+				max-width: calc(100% - 174px);
 			}
 			@include media-breakpoint-up(md) {
 				padding-top: rem(70);
@@ -137,7 +140,10 @@
 		&--links {
 			padding-top: rem(16);
 			padding-bottom: rem(55);
-			max-width: rem(956);
+			// max-width: rem(956);
+			@include media-breakpoint-up(lg) {
+				max-width: calc(100% - 62px);
+			}
 			@include media-breakpoint-up(md) {
 				padding-top: rem(76);
 				padding-bottom: rem(44);
@@ -365,7 +371,7 @@
 		width: 100%;
 	}
 	&__input-title {
-		font-size: 12px;
+		font-size: rem(12);
 		color: $body-color;
 		font-weight: 600;
 		margin-bottom: rem(4);

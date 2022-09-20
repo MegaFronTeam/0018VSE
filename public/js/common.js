@@ -591,11 +591,12 @@ function eventHandler() {
 	})
 
 	$('.soc--js').hcSticky({
-		mobileFirst: true,
+		// mobileFirst: true,
+		stickTo: $('.main-block'),
+		top: 20,
 		responsive: {
 			768: {
-				stickTo: $('.main-block'),
-				top: 20,
+				disable: true,
 			}
 		},
   });

@@ -4,31 +4,40 @@
 	--sPT: #{rem(0)};
 	--sPB: #{rem(24)};
 	// --sTPB: #{rem()};
+	position: static !important;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(10)};
 		--sPB: #{rem(103)};
 	}
+	// @include media-breakpoint-up(lg) {
+	// 	position: relative ;
+	// }
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
-	max-width: rem(808);
 	margin-left: auto;
 	margin-right: auto;
-	position: relative;
+	@include media-breakpoint-up(lg) {
+		max-width: calc(100% - 100px);
+	}
 	.soc {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			--bs-gutter-y: #{rem(16)};
 			position: absolute;
-			top: rem(18);
-			left: rem(-95);
+			top: 30px;
+			left: 5px;
 			flex-direction: column;
 			margin-top: calc(var(--bs-gutter-y) * -1);
 		}
+		@include media-breakpoint-up(lg) {
+			top: rem(18);
+			left: rem(-95);
+		}
 		@include media-breakpoint-up(xl) {
 			top: rem(21);
-			left: rem(-181);
+			left: rem(-95);
 		}
 		&__item {
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(md) {
 				margin-top: var(--bs-gutter-y);
 			}
 		}

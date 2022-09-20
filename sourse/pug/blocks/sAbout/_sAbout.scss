@@ -3,9 +3,12 @@
 	--sPT: #{rem(12)};
 	--sPB: #{rem(72)};
 	// --sTPB: #{rem()};
-	max-width: rem(808);
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	@include media-breakpoint-up(sm) {
+		max-width: calc(100% - 108px);
+	}
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(12)};
 		--sPB: #{rem(51)};
