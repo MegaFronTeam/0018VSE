@@ -618,6 +618,12 @@ iframe {
 		&__filter {
 			margin-bottom: rem(9);
 		}
+		.container {
+			width: 100%;
+			@include media-breakpoint-up(lg) {
+				max-width: calc(100% - rem(206));
+			}
+		}
 	}
 }
 

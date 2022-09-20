@@ -595,7 +595,7 @@ function eventHandler() {
 		responsive: {
 			768: {
 				stickTo: $('.main-block'),
-				top: 80,
+				top: 20,
 			}
 		},
   });

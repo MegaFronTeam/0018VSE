@@ -91,7 +91,7 @@
 		}
 	}
 	&__desc {
-		max-width: rem(585);
+		// max-width: rem(585);
 		h1 {
 			margin-bottom: rem(8);
 			line-height: 1.17em;
@@ -114,10 +114,13 @@
 		max-width: rem(475);
 	}
 	.tags {
-		max-width: rem(838);
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: rem(40);
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			max-width: calc(100% - rem(176));
+		}
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(56);
 		}
@@ -131,9 +134,13 @@
 	}
 	&__content {
 		position: static !important;
-		max-width: rem(808);
+		// max-width: rem(808);
 		margin-left: auto;
 		margin-right: auto;
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			max-width: calc(100% - rem(204));
+		}
 		h2 {
 			margin-bottom: rem(16);
 		}
