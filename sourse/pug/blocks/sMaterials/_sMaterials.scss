@@ -10,6 +10,9 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+		@include media-breakpoint-down(md) {
+			height: auto !important;
+		}
 	}
 	.section-title{
 		
