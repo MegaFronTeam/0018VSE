@@ -340,7 +340,7 @@
 		width: 100%;
 	}
 	&__input-title {
-		font-size: 12px;
+		font-size: rem(12);
 		color: $body-color;
 		font-weight: 600;
 		margin-bottom: rem(4);
@@ -487,7 +487,7 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		overflow: hidden;
+		// overflow: hidden;
 		@include media-breakpoint-up(md) {
 			min-height: rem(268);
 		}
@@ -506,6 +506,7 @@
 		}
 		.sMaterials-item {
 			&__img-wrap {
+				overflow: hidden;
 				&:before {
 					content: '';
 					position: absolute;
@@ -579,17 +580,17 @@
 	align-items: center;
 	justify-content: center;
 	flex: 0 0 auto;
-	padding: 4px;
+	padding: rem(4);
 	position: absolute;
-	top: 8px;
-	left: 8px;
-	border-radius: 4px;
+	top: rem(8);
+	left: rem(8);
+	border-radius: rem(4);
 	background-color: #fff;
 	z-index: 1;
 	cursor: pointer;
 	.icon {
 		color: $primary;
-		font-size: 16px;
+		font-size: rem(16);
 		&-video, &-image {
 			fill: none;
 			stroke: currentColor;
@@ -607,8 +608,8 @@
 		opacity: 0;
 		pointer-events: none;
 		position: absolute;
-		font-size: 12px;
-		padding: 4px 8px;
+		font-size: rem(12);
+		padding: rem(4) rem(8);
 		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 		background-color: #fff;
 		width: max-content;
@@ -619,8 +620,8 @@
 			content: '';
 			position: absolute;
 			display: block;
-			width: 10px;
-			height: 10px;
+			width: rem(10);
+			height: rem(10);
 			background-color: #fff;
 			z-index: -1;
 			bottom: -5px;
@@ -680,7 +681,7 @@
 			color: $danger;
 		}
 		.icon {
-			font-size: 16px;
+			font-size: rem(16);
 			vertical-align: text-bottom;
 			fill: none;
 			stroke: currentColor;
