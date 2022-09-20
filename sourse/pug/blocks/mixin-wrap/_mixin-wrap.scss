@@ -483,14 +483,15 @@
 		background-color: #E9E9E9;
 	}
 	&--second {
+		--dinamicHeight: #{calc(454/268)};
 		min-height: rem(328);
+		max-height: 100%;
 		display: flex;
 		flex-direction: column;
-		height: 100%;
-		// overflow: hidden;
-		@include media-breakpoint-up(md) {
-			min-height: rem(268);
-		}
+		height: calc(var(--dinamicHeight) * 100%);
+		// @include media-breakpoint-up(md) {
+		// 	height: rem(268);
+		// }
 		&:hover {
 			img {
 				transform: scale(1.1);
@@ -507,7 +508,7 @@
 		.sMaterials-item {
 			&__img-wrap {
 				overflow: hidden;
-				&:before {
+				&:after {
 					content: '';
 					position: absolute;
 					display: block;
@@ -516,6 +517,8 @@
 					z-index: 1;
 					background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 					opacity: .8;
+					left: 0;
+					top: 0;
 				}
 			}
 			&__content {
