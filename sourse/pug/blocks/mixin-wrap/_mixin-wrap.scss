@@ -576,7 +576,7 @@
 				@include mt;
 				color: #D3D3D3;
 				border: 1px solid rgba(244, 244, 244, 0.3);
-				border-radius: 12px;
+				border-radius: rem(20);
 				background-color: transparent;
 				&:hover {
 					background-color: #D3D3D3;
@@ -695,7 +695,8 @@
 		height: 100%;
 		border-radius: 20px;
 		@include media-breakpoint-up(md) {
-			border-radius: 12px;
+			border-radius: rem(20);
+			// border-radius: 12px;
 			display: flex !important;
 		}
 		@include media-breakpoint-up(sm) {

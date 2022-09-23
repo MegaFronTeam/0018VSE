@@ -158,7 +158,7 @@
 		position: relative;
 		padding-bottom: rem(25);
 		@include media-breakpoint-up(lg) {
-			max-width: 90%;
+			// max-width: 90%;
 			--bs-gutter-y: #{rem(0)};
 			padding-top: rem(30);
 		}
@@ -186,6 +186,15 @@
 			opacity: .4;
 			margin-right: rem(8);
 			vertical-align: sub;
+		}
+		&--last-elem {
+			@include media-breakpoint-up(lg) {
+				display: block;
+				width: rem(354);
+			}
+			@include media-breakpoint-up(xl) {
+				width: rem(352);
+			}
 		}
 	}
 	.soc {
