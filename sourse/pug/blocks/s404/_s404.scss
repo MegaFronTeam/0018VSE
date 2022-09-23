@@ -3,8 +3,10 @@
 	--sPT: #{rem(0)};
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
+	padding: env(safe-area-inset-top, 20px) 0 env(safe-area-inset-bottom, 20px) 0;
 	background-color: $primary;
 	min-height: 100vh;
+	height: 100%;
 	width: 100%;
 	display: flex;
 	justify-content: center;
