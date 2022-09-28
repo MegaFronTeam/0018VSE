@@ -1,15 +1,23 @@
 mixin sRegionsContent(data)
 	// start sRegionsContent
 	+b.SECTION.sRegionsContent.section#sRegionsContent.tabs&attributes(attributes)
-		+e.container.container.p-0
-			+e.head
-				+e.img-wrap
-					+img('img/region-1.jpg')
+		+e.img-bg
+			+e.wrap
+				+img('img/sRegions-bg-lg-1.jpg', 'bg').picture-bg
 				+e.head-content
 					h1 Европейский север
 					.tabs__caption
 						.tabs__btn.active О регионе
 						.tabs__btn Материалы
+		+e.container.container.p-0
+			//- +e.head
+				//- +e.img-wrap
+				//- 	+img('img/region-1.jpg')
+				//- +e.head-content
+				//- 	h1 Европейский север
+				//- 	.tabs__caption
+				//- 		.tabs__btn.active О регионе
+				//- 		.tabs__btn Материалы
 			+e.body--content.tabs__content.active
 				+b.section-title
 					p Густые леса, океанский прибой, китайские мигранты, японские суши-бары, военные корабли Тихоокеанского флота в&nbsp;заливе Золотой Рог, женьшень, тигры, орлы, киты&nbsp;&mdash; вот лишь немногое, что у&nbsp;нас ассоциируется с&nbsp;российским Дальним Востоком. Это край прекрасных пейзажей и&nbsp;ворота из&nbsp;России в&nbsp;Восточную Азию. Густые леса, океанский прибой, китайские мигранты, японские суши-бары, военные корабли Тихоокеанского флота в&nbsp;заливе Золотой Рог, женьшень, тигры, орлы, киты&nbsp;&mdash; вот лишь немногое, что у&nbsp;нас ассоциируется с&nbsp;российским Дальним Востоком. Это край прекрасных пейзажей и&nbsp;ворота из&nbsp;России в&nbsp;Восточную Азию.
