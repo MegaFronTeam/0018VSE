@@ -24,9 +24,9 @@
 	}
 	&__img-bg {
 		position: relative;
-		@include media-breakpoint-up(lg) {
-			// height: rem(435);
-		}
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
 		@include block(1280, 440);
 		@include media-breakpoint-down(lg) {
 			--ratio: 216/360;
