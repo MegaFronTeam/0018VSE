@@ -200,17 +200,19 @@
 	.soc {
 		--bs-gutter-x: #{rem(16)};
 		&__item {
-			width: rem(24);
-			height: rem(24);
+			width: rem(36.5);
+			height: rem(36.5);
 			border: 1px solid #fff;
 			border-radius: 2px;
 			.icon {
 				&-tg {
-					font-size: rem(20);
+					// font-size: rem(20);
+					font-size: rem(28);
 					margin-left: 2px;
 				}
 				&-youtube {
-					font-size: rem(10);
+					// font-size: rem(10);
+					font-size: rem(22.4);
 				}
 			}
 		}

@@ -46,6 +46,17 @@
 			}
 		}
 	}
+	.search-toggle {
+		margin-right: rem(12);
+		@include media-breakpoint-up(lg) {
+			margin-right: 0;
+		}
+	}
+	.search-block {
+		&__cross {
+			margin-right: 0;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -1,7 +1,30 @@
 
 	// start .header
-	.header {
-		 
+.header {
+	@include media-breakpoint-up(lg) {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		&--js{
+			
+			&.fixed-animate{
+				transition: transform .4s;
+				position: fixed;
+			}
+			&.fixed{
+				transform: translateY(-100%);
+				// padding-top: .875rem;
+				// padding-top: 0;
+			}
+			&.fixed-show{
+				transform: translateY(0);
+				
+			}
+		}
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

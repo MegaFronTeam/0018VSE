@@ -416,11 +416,14 @@ function eventHandler() {
 
 
 	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
+		let topNav = document.querySelector('.header');
 		if (!topNav) return;
-		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		// console.log(scrollTop);
+
+		scrollTop > 160 ? topNav.classList.add('fixed') : topNav.classList.remove('fixed');
+		scrollTop > 250 ? topNav.classList.add('fixed-animate') : topNav.classList.remove('fixed-animate');
+		scrollTop > 400 ? topNav.classList.add('fixed-show') : topNav.classList.remove('fixed-show');
 	}
 
 	function whenResize() {
@@ -429,11 +432,14 @@ function eventHandler() {
 
 	window.addEventListener('scroll', () => {
 		setFixedNav();
-
-	}, { passive: true })
+	}, {
+		passive: true
+	});
 	window.addEventListener('resize', () => {
 		whenResize();
-	}, { passive: true });
+	}, {
+		passive: true
+	});
 
 	whenResize();
 
