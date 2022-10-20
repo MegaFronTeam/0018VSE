@@ -606,6 +606,16 @@ function eventHandler() {
 			}
 		},
   });
+
+	let jsChoices = document.querySelectorAll('.js-choice');
+	if(jsChoices) {
+		for (const jsChoice of jsChoices) {
+			const choices = new Choices(jsChoice, {
+				searchEnabled: false,
+			});
+		}
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -51,14 +51,31 @@ mixin main-page-head(img, title, date="", filter)
 			if filter
 				+e.filter
 					+e.filter-row.row
+						mixin customSelect(text)
+							+e.input-wrap.form-group
+								label
+									+e.SPAN.input-title!= text
+									+e.SELECT.input.form-select.js-choice
+										option(value="Архивный фонд") Архивный фонд
+										option(value="Книги и исследования") Книги и исследования
+										option(value="Архивный фонд") Архивный фонд
+										option(value="Лонгрид") Лонгрид
+										option(value="Архивный фонд") Архивный фонд
+										option(value="Книги и исследования") Книги и исследования
+										option(value="Архивный фонд") Архивный фонд
+										option(value="Лонгрид") Лонгрид
+										option(value="Архивный фонд") Архивный фонд
+										option(value="Книги и исследования") Книги и исследования
+										option(value="Архивный фонд") Архивный фонд
+										option(value="Лонгрид") Лонгрид
 						.col-md-auto
-							+input('Все', 'select', 'Регионы').active
+							+customSelect('Регионы')
 						.col-md-auto
-							+input('Все', 'select', 'Регионы')
+							+customSelect('Период')
 						.col-md-auto
-							+input('Все', 'select', 'Регионы')
+							+customSelect('Тип')
 						.col-md-auto
-							+input('Все', 'select', 'Регионы')
+							+customSelect('Тема')
 
 //- mixin page-head(t,...items)
 //- 	+b.page-head

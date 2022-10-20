@@ -24,13 +24,18 @@
 	}
 	&__img-bg {
 		position: relative;
-		max-width: 1920px;
+		// max-width: 1920px;
+		// max-height: rem(440);
+		min-height: rem(216);
 		margin-left: auto;
 		margin-right: auto;
 		@include block(1280, 440);
 		// @include media-breakpoint-down(lg) {
 		// 	--ratio: 216/360;
 		// }
+		img {
+			object-position: top;
+		}
 	}
 	&__wrap {
 		position: absolute;
