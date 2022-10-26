@@ -96,12 +96,18 @@ mixin sMaterialsTootlip(text, icon)
 		+e.hover!= text
 		+icon(icon)
 
-mixin sMaterialsItem(img, title, text, date, name, ...items)
+mixin sMaterialsItem(img, title, text, date, name, def=true, ...items)
 	+e.col.col-12.col-md-6.col-lg-4&attributes(attributes)(data-aos="fade-up")
 		+b.sMaterials-item
 			block
-			+e.img-wrap
-				img(src=`img/${img}` alt="image")
+			if def
+				+e.img-wrap
+					.img-wrap-center
+						img(src=`img/${img}` alt="image")
+			else
+				+e.img-wrap--vertical
+					.img-wrap-center
+						img(src=`img/${img}` alt="image")
 			+e.content 
 				if name
 					+e.name!= name
@@ -114,7 +120,7 @@ mixin sMaterialsItemSecond(img, title, text, date, name, ...items)
 	+e.col.col-12.col-md-6(data-aos="fade-up")
 		+b.sMaterials-item--second.bg-wrap
 			block
-			+e.img-wrap.picture-bg
+			+e.img-wrap-bg.picture-bg
 				img(src=`img/${img}` alt="image")
 			+e.content 
 				if name

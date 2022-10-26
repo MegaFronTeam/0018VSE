@@ -14,7 +14,8 @@ mixin headerBlock(simpleSlider=false, imgCenter=false, name, title, date, text)
 												+img("img/book-2.png")
 									else
 										+e.img-wrap
-											+img("img/slide.jpg",'bg')
+											.img-wrap-center
+												+img("img/slide.jpg")
 						if simpleSlider
 							+e.control-wrap
 								+arrow
@@ -63,7 +64,8 @@ mixin headerBlock2()
 							- for (var x = 0; x < 4; x++)
 								+e.slide--video.bg-wrap.swiper-slide(data-src='https://www.youtube.com/embed/L_LUpnjgPso' data-fancybox=`video-${x}`)
 									+e.img-wrap
-										+img("img/slide.jpg",'bg')
+										.img-wrap-center
+											+img("img/slide.jpg")
 									+e.video-button
 										+img('img/svg/play.svg')
 	// end headerBlock

@@ -552,21 +552,25 @@
 	&__img-wrap {
 		min-height: rem(172);
 		background-color: #E9E9E9;
-		@include media-breakpoint-down(md) {
-			@include block(328, 193);
+		@include block(292, 172);
+		// @include media-breakpoint-down(md) {
+		// 	@include block(328, 193);
+		// }
+		&--vertical {
+			@include block(292, 292);
 		}
 		img {
-			@include media-breakpoint-down(md) {
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 100%;
-				width: 100%;
-				object-fit: contain;
-			}
-			@include media-breakpoint-up(md) {
-				width: 100%;
-			}
+			// @include media-breakpoint-down(md) {
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left: 0;
+			// 	height: 100%;
+			// 	width: 100%;
+			// 	object-fit: contain;
+			// }
+			// @include media-breakpoint-up(md) {
+			// 	width: 100%;
+			// }
 		}
 	}
 	&--second {
@@ -593,7 +597,7 @@
 			}
 		}
 		.sMaterials-item {
-			&__img-wrap {
+			&__img-wrap-bg {
 				overflow: hidden;
 				@include media-breakpoint-down(md) {
 					position: absolute;
@@ -862,4 +866,7 @@
 
 .error-page{
 	overflow: hidden;
+	.main-wrapper {
+		padding: 0;
+	}
 }
