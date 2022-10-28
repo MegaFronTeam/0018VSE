@@ -77,21 +77,33 @@
 		}
 	}
 	&__avatar {
+		@include block(203, 203);
 		width: 100%;
+		width: rem(203);
 		max-width: rem(203);
 		margin-left: auto;
 		margin-right: auto;
+		position: relative;
 		@include media-breakpoint-up(md) {
 			margin-right: unset;
 			margin-left: unset;
 		}
 		@include media-breakpoint-up(lg) {
+			--ratio: 292/292;
+			width: rem(292);
 			max-width: rem(292);
 		}
 		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 			border-radius: 50%;
 			border: 4px solid #FFFFFF;
 			width: 100%;
+			object-fit: cover;
+			// object-position: top;
 		}
 	}
 	&__desc {

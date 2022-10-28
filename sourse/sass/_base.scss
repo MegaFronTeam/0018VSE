@@ -823,3 +823,9 @@ iframe {
 	border-width: 3px;
 	border-radius: 0px;
 }
+
+.personality-page {
+	.main-block {
+		z-index: 2;
+	}
+}

@@ -588,7 +588,9 @@ function eventHandler() {
 
 	const sSearchSwiper = new Swiper('.sSearch__tabs-slider--js', {
 		slidesPerView: 'auto',
-		spaceBetween: 22,
+		// spaceBetween: 17,
+		// freeMode: true,
+		watchOverflow: true,
 	});
 
 	$(".search-toggle--js").on("click", function(e){
