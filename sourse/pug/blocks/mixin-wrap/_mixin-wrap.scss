@@ -377,6 +377,7 @@
 			padding: rem(6) rem(40) rem(6) rem(16);
 			min-height: auto;
 			padding-bottom: rem(6) !important;
+			max-height: rem(41);
 			@include media-breakpoint-up(md) {
 				border-color: #fff;
 				color: #fff;
@@ -389,17 +390,23 @@
 		&__list {
 			&--single {
 				padding: 0;
+				.choices__item {
+					@include ellips;
+				}
 			}
 			&--dropdown {
 				border: none;
 				border-radius: 0 0 20px 20px;
 				background-color: $body-color;
+				box-shadow: 1px 9px 9px 3px #0000001f;
 				@include media-breakpoint-up(md) {
 					background-color: #fff;
 				}
 				.choices__list {
+					@extend .custom-scroll;
 					max-height: rem(120);
-					// overflow: scroll;
+					overflow-x: visible;
+					overflow-y: scroll;
 				}
 				.choices__item {
 					color: $body-color;
@@ -841,7 +848,7 @@
 		padding-left: rem(16);
 		padding-right: rem(16);
 		@media (min-width: 1921px) {
-			max-width: 1828px;
+			max-width: 1632px;
 		}
 		@include media-breakpoint-up(lg) {
 			max-width: calc(100% - 224px);
