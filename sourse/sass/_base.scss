@@ -475,7 +475,7 @@ iframe {
 
   /* Chrome, Edge, and Safari */
   &::-webkit-scrollbar {
-    width: 2px;
+    width: 4px;
   }
 
   &::-webkit-scrollbar-track {
@@ -621,6 +621,9 @@ iframe {
 	.main-page-head {
 		@include media-breakpoint-up(md) {
 			min-height: rem(425);
+		}
+		@include media-breakpoint-down(md) {
+			z-index: 13;
 		}
 		h1 {
 			margin-bottom: rem(10);

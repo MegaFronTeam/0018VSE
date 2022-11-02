@@ -118,9 +118,9 @@ mixin sMaterialsItem(img, title, text, date, name, def=true, ...items)
 
 mixin sMaterialsItemSecond(img, title, text, date, name, ...items)
 	+e.col.col-12.col-md-6(data-aos="fade-up")
-		+b.sMaterials-item--second.bg-wrap
+		+b.sMaterials-item--second
 			block
-			+e.img-wrap-bg.picture-bg
+			+e.img-wrap-bg
 				img(src=`img/${img}` alt="image")
 			+e.content 
 				if name
