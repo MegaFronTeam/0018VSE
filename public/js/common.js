@@ -614,6 +614,12 @@ function eventHandler() {
 		for (const jsChoice of jsChoices) {
 			const choices = new Choices(jsChoice, {
 				searchEnabled: false,
+				callbackOnInit: () => {
+					$(".choices__list--dropdown .choices__list").mCustomScrollbar({
+						axis:"y",
+						theme:"dark",
+					});
+				},
 			});
 		}
 	}

@@ -403,10 +403,10 @@
 					background-color: #fff;
 				}
 				.choices__list {
-					@extend .custom-scroll;
+					// @extend .custom-scroll;
 					max-height: rem(120);
-					overflow-x: visible;
-					overflow-y: scroll;
+					// overflow-x: visible;
+					// overflow-y: scroll;
 				}
 				.choices__item {
 					color: $body-color;
@@ -417,6 +417,15 @@
 						background-color: rgba($color: #E9E9E9, $alpha: .5);
 					}
 				}
+			}
+			.mCSB_container {
+				margin-right: 0;
+			}
+			.mCSB_draggerRail {
+				opacity: 0;
+			}
+			.mCSB_dragger_bar {
+				background-color: #E9E9E9 !important;
 			}
 		}
 		&__item {
@@ -581,17 +590,20 @@
 		}
 	}
 	&--second {
-		min-height: 328px;
+		@include block(328, 373);
+		// min-height: 328px;
 		max-height: 100%;
-		display: flex;
-		flex-direction: column;
+		// display: flex;
+		// flex-direction: column;
 		position: relative;
 		z-index: 2;
-		// --dinamicHeight: #{calc(454/268)};
-		// height: calc(var(--dinamicHeight) * 100%);
-		// @include media-breakpoint-up(md) {
-		// 	height: rem(268);
-		// }
+		@include media-breakpoint-up(sm) {
+			--ratio: 328/328;
+		}
+		@include media-breakpoint-up(md) {
+			// min-height: rem(340);
+			--ratio: 268/454;
+		}
 		&:hover {
 			img {
 				transform: scale(1.1);
@@ -606,16 +618,27 @@
 			}
 		}
 		.sMaterials-item {
+			&__inner {
+				// position: absolute;
+				// top: 0;
+				// left: 0;
+				// width: 100%;
+				// height: 100%;
+				// display: flex;
+				// flex-direction: column;
+				// overflow: hidden;
+			}
 			&__img-wrap-bg {
 				overflow: hidden;
 				z-index: -1;
-				@include block(454, 268);
-				flex-grow: 1;
+				// @include block(454, 268);
+				// flex-grow: 1;
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
 				img {
-					position: absolute;
-					left: 0;
-					top: 0;
-					height: 100%;
 					width: 100%;
 				}
 				@include media-breakpoint-down(md) {
@@ -642,17 +665,22 @@
 			}
 			&__content {
 				position: absolute;
-				bottom: var(--bs-gutter-y);
+				bottom: 0;
 				left: 0;
 				width: 100%;
+				height: 100%;
 				// height: calc(100% - var(--bs-gutter-y));
+				z-index: 2;
 
 				margin-top: auto;
 				padding-top: rem(40);
 				width: 100%;
-				@include media-breakpoint-up(md) {
-					max-width: rem(422);
-				}
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				// @include media-breakpoint-up(md) {
+				// 	max-width: rem(422);
+				// }
 				.h5 {
 					font-weight: 400;
 					color: #fff;
@@ -668,6 +696,9 @@
 			}
 			&__text {
 				color: #fff;
+				@include media-breakpoint-up(md) {
+					max-width: rem(422);
+				}
 				&:hover {
 					.h5 {
 						color: #D3D3D3;
@@ -717,7 +748,7 @@
 	left: rem(8);
 	border-radius: rem(4);
 	background-color: #fff;
-	z-index: 1;
+	z-index: 4;
 	cursor: pointer;
 	.icon {
 		color: $primary;
