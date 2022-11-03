@@ -1,4 +1,4 @@
-mixin headerBlock(simpleSlider=false, imgCenter=false, name, title, date, text)
+mixin headerBlock(simpleSlider=false, imgCenter=false, name, title, date, text, needToCenterImg=true)
 	// start headerBlock
 	+b.headerBlock&attributes(attributes)
 		.container.p-0
@@ -13,8 +13,12 @@ mixin headerBlock(simpleSlider=false, imgCenter=false, name, title, date, text)
 											.img-wrap-center
 												+img("img/book-2.png")
 									else
-										+e.img-wrap
-											.img-wrap-center
+										if needToCenterImg 
+											+e.img-wrap
+												.img-wrap-center
+													+img("img/slide.jpg")
+										else 
+											+e.img-wrap--full
 												+img("img/slide.jpg")
 						if simpleSlider
 							+e.control-wrap

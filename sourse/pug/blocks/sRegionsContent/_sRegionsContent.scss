@@ -553,14 +553,16 @@
 				&__list {
 					&--dropdown {
 						border: 2px solid $body-color;
-						border-top-color: transparent;
+						// border-top-color: transparent;
+						border-top: none;
 					}
 				}
 				&__inner {
 					border-radius: 20px 20px 0 0;
 					// background-color: $body-color;
 					background-color: #fff;
-					border-bottom-color: transparent;
+					// border-bottom-color: transparent;
+					border-bottom: none;
 					@include media-breakpoint-up(md) {
 					}
 				}
@@ -573,6 +575,12 @@
 					&--selectable {
 					}
 				}
+			}
+			.mCSB_container {
+				margin-right: 0;
+			}
+			.mCSB_draggerRail {
+				background-color: transparent;
 			}
 		}
 	}
