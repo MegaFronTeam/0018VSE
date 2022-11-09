@@ -662,6 +662,16 @@
 					left: 0;
 					top: 0;
 				}
+				&.vertical {
+					display: flex;
+					align-items: center;
+					img {
+						display: block;
+						margin: 0 auto;
+						width: auto!important;
+						height: calc(100% - 20px);
+					}
+				}
 			}
 			&__content {
 				position: absolute;
