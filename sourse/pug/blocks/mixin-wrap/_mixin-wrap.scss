@@ -576,17 +576,26 @@
 			@include block(292, 292);
 		}
 		img {
+			// position: absolute;
+			// top: 0;
+			// left: 0;
+			// height: 100%;
+			// width: 100%;
+			// object-fit: contain;
 			// @include media-breakpoint-down(md) {
-			// 	position: absolute;
-			// 	top: 0;
-			// 	left: 0;
-			// 	height: 100%;
-			// 	width: 100%;
-			// 	object-fit: contain;
 			// }
 			// @include media-breakpoint-up(md) {
 			// 	width: 100%;
 			// }
+		}
+		.img-wrap-center {
+			img {
+				// position: static;
+				// height: auto;
+    		// max-width: 100%;
+				// width: auto;
+				// object-fit: none;
+			}
 		}
 	}
 	&--second {
