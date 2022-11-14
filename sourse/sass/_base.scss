@@ -572,12 +572,8 @@ iframe {
 }
 
 .img-wrap-center {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
 	display: flex;
+	@include a-cent;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -586,6 +582,15 @@ iframe {
 		max-height: 100%;
 		// width: auto !important;
 		position: static !important;
+	}
+	a{
+		display: block;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: rem(30);
 	}
 }
 

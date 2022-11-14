@@ -1,4 +1,4 @@
-mixin headerBlock(simpleSlider=false, imgCenter=false, name, title, date, text, needToCenterImg=true)
+mixin headerBlock(simpleSlider=false, isLink=false, name, title, date, text, isImgToCenter=true)
 	// start headerBlock
 	+b.headerBlock&attributes(attributes)
 		.container.p-0
@@ -8,18 +8,15 @@ mixin headerBlock(simpleSlider=false, imgCenter=false, name, title, date, text, 
 						.swiper-wrapper
 							- for (var x = 0; x < 3; x++)
 								+e.slide.bg-wrap.swiper-slide
-									if imgCenter
-										+e.img-wrap(href="#" data-src="img/book-2.png" data-fancybox="gallery-with-caption" data-info="Представленная монография была написана Мерлом Фэйнсодом, профессором Гарвардского университета, известным историком, стоявшим у истоков формирования западной советологии. Она написана на базе «Смоленского архива», который после Второй мировой войны находился в Национальном архиве США в результате его обнаружения американскими военнослужащими в Баварии в 1945 г." data-title="Над пропастью во ржи" data-name="Джером Сэлинджер")
-											.img-wrap-center
-												+img("img/book-2.png")
-									else
-										if needToCenterImg 
-											+e.img-wrap
-												.img-wrap-center
-													+img("img/slide.jpg")
-										else 
-											+e.img-wrap--full
+									+e.img-wrap()
+										.img-wrap-center
+											if isLink
+												a(href="#" data-src="img/book-2.png" data-fancybox="gallery-with-caption" data-info="Представленная монография была написана Мерлом Фэйнсодом, профессором Гарвардского университета, известным историком, стоявшим у истоков формирования западной советологии. Она написана на базе «Смоленского архива», который после Второй мировой войны находился в Национальном архиве США в результате его обнаружения американскими военнослужащими в Баварии в 1945 г." data-title="Над пропастью во ржи" data-name="Джером Сэлинджер")
+													+img("img/book-2.png") 
+											else if isImgToCenter  
 												+img("img/slide.jpg")
+											else  
+												+img("img/slide.jpg",'bg')
 						if simpleSlider
 							+e.control-wrap
 								+arrow
