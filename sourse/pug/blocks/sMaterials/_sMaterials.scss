@@ -6,7 +6,10 @@
 	&__row{
 		--bs-gutter-x: #{rem(24)};
 		--bs-gutter-y: #{rem(32)};
-		margin-bottom: rem(62);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(62);
+		}
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -56,6 +59,38 @@
 	.pagination-wrapper {
 		ul {
 			justify-content: center;
+		}
+	}
+	&__headline {
+		display: flex;
+		align-items: center;
+	}
+	&__link {
+		font-family: var(--bs-font-sans-serif);
+		display: flex;
+		align-items: center;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: rem(14);
+		line-height: 1;
+		margin-bottom: rem(35);
+		justify-content: center;
+		border-radius: 0;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 0;
+			justify-content: flex-start;
+		}
+		.icon {
+			flex: 0 0 auto;
+			color: $red;
+			font-size: rem(24);
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 2px;
+			margin-right: 0;
 		}
 	}
 	&--grid {
