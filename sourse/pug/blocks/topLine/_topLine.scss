@@ -27,11 +27,17 @@
 	padding-top: rem(4);
 	padding-bottom: rem(4);
 	&__col{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		img{
-			margin-right: rem(10);
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			&:hover {
+				color: $gray-100;
+			}
+			img{
+				margin-right: rem(10);
+			}
 		}
 	}
 	&__text {
